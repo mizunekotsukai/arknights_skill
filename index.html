@@ -4,42 +4,36 @@
     <meta charset="UTF-8">
     <title>スキル一覧</title>
     <style>
-      body {
-        text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%; /* Safari */
-      }
-      table {
-        border-collapse: collapse;
-      }
-      th {
-        padding: 0 0.3em;
-        border: 1px solid lightgray;
-        white-space:nowrap;
-        background: #eef;
-      }
-      th[name=skillNo] {
-        min-width:4em;
-      }
-      th[name=duty] {
-        min-width:3em;
-      }
-      th[name=effect] {
-        min-width:50em;
-      }
-      input[name=rarity] {
-        margin: 0 0 1em 1em;
-        vertical-align: -0.3em;
-      }
-      input[name=tag] {
-        margin: 0 0 1em 1em;
-        vertical-align: -0.3em;
-      }
-      td {
-        padding: 0 0.3em;
-        border: 1px solid lightgray;
-        max-width: 50em;
-        white-space: pre-wrap;
-      }
+/* === ページ全体のスタイル ===================== */
+body {
+  font-family: sans-serif;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; /* Safari */
+}
+table {
+  border-collapse: collapse;
+}
+th {
+  padding    : 0 0.3em;
+  border     : 1px solid lightgray;
+  white-space: nowrap;
+  background : #eef;
+}
+th[name=skillNo] {
+  min-width  : 4em;
+}
+th[name=duty] {
+  min-width  : 3em;
+}
+th[name=effect] {
+  min-width  : 50em;
+}
+td {
+  padding    : 0 0.3em;
+  border     : 1px solid lightgray;
+  max-width  : 50em;
+  white-space: pre-wrap;
+}
 
 /* === フィルタボタン ============================ */
 .btArea{
@@ -56,15 +50,11 @@
   height     : 8px;
   background : #eee;
   border     : 1px solid #777;
-  border-radius : 2px;
+  border-radius: 2px;
   margin     : 1px 3px;
   padding    : 3px;
   cursor     : pointer;
 }
-/* === フィルタボタン（カーソルオーバー時）======= */
-/* .tfImg:hover{
-  background : #FFD700;
-} */
 /* === フィルタボタン内の画像色（SVG）============ */
 .tfImg path{
   fill       : #777;
@@ -81,7 +71,7 @@
   left       : 0;
   line-height: 1.1;
   font-weight: normal;
-  z-index:1;
+  z-index    : 1;
 }
 /* === フィルタリスト内のform ==================== */
 .tfList form{
@@ -99,7 +89,7 @@
 .tfMeisai label{
   padding    : 0 10px 0 3px;
 }
-/* === OK/CANCELボタン =========================== */
+/* === OK/CANCEL/UP/DOWNボタン =================== */
 .tfBtnArea{
   text-align : center;
   font-size  : 8pt;
@@ -123,36 +113,25 @@
   font-size  : 95%;
   border     : 1px solid #ccc;
 }
-/* === フィルタ初期非表示 ============================ */
-#skillTable tr[cmanFilterNone]{
+/* === フィルタ非表示用タグ ====================== */
+tr[cmanFilterNone]{
   display    : none;
 }
-#skillTable tr[opFilterNone]{
+tr[opFilterNone]{
   display    : none;
 }
-/* #skillTable tr[unimplemented]{
+th[thFilterNone]{
   display    : none;
 }
-#skillTable tr[onlyIS]{
+td[thFilterNone]{
   display    : none;
 }
-#skillTable tr[noSkill]{
-  display    : none;
-} */
-#skillTable th[thFilterNone]{
-  display    : none;
-}
-#skillTable td[thFilterNone]{
-  display    : none;
-}
-#skillTable td[hiddenRow]{
+td[hiddenRow]{
   display    : none;
 }
     </style>
   </head>
-
   <body>
-
     <h3>スキル一覧</h3>
     <p>性能は最大強化時です</p>
 <!-- フィルタ対象のテーブル -->
@@ -1362,7 +1341,7 @@ HPが最大値の50%以上の場合、攻撃力+45%の勇猛状態を獲得し�
 <tr onlyIS><td>予備隊員-術師</td><td>3</td><td>術師</td><td>中堅術師</td><td>-</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr onlyIS><td>予備隊員-支援</td><td>3</td><td>医療</td><td>医師</td><td>-</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr unimplemented><td>ヴィーナ・ヴィクトリア</td><td>6</td><td>前衛</td><td>術戦士</td><td>スキル1</td><td>重铸晖光</td><td>自動回復</td><td>自動発動</td><td>0</td><td>5</td><td>-</td><td>次の攻撃時、周囲全ての地上の敵に180%の確定ダメージを与える。</td><td></td></tr>
-<tr unimplemented><td>ヴィーナ・ヴィクトリア</td><td>6</td><td>前衛</td><td>術戦士</td><td>スキル2</td><td>进赴故土　</td><td>自動回復</td><td>自動発動</td><td>0</td><td>70</td><td>-</td><td>パッシブ：素質1の範囲内に2体以上の味方ユニットがいる場合、自身のSP+0.5sp/秒
+<tr unimplemented><td>ヴィーナ・ヴィクトリア</td><td>6</td><td>前衛</td><td>術戦士</td><td>スキル2</td><td>进赴故土</td><td>自動回復</td><td>自動発動</td><td>0</td><td>70</td><td>-</td><td>パッシブ：素質1の範囲内に2体以上の味方ユニットがいる場合、自身のSP+0.5sp/秒
 アクティブ：攻撃距離+1、攻撃力+180%、攻撃対象数+1
 退場まで効果継続</td><td>永続</td></tr>
 <tr unimplemented><td>ヴィーナ・ヴィクトリア</td><td>6</td><td>前衛</td><td>術戦士</td><td>スキル3</td><td>俱以我之名</td><td>自動回復</td><td>手動発動</td><td>35</td><td>50</td><td>25</td><td>発動時、即座に素質1の効果範囲内に「黄金盟誓」を召喚して配置。スキル発動中は素質1の有効範囲内の味方がブロックした敵も攻撃する事ができ、攻撃力+190%、攻撃対象数+3、攻撃間隔が短縮(-0.25)、与えるダメージが確定ダメージとなる。</td><td></td></tr>
@@ -1448,29 +1427,28 @@ HPが最大値の50%以上の場合、攻撃力+45%の勇猛状態を獲得し�
 <tr unimplemented><td>ブリジット</td><td>5</td><td>狙撃</td><td>旋輪射手</td><td>スキル1</td><td>所熟知的</td><td>攻撃回復</td><td>自動発動</td><td>0</td><td>2</td><td>-</td><td>次の攻撃時、攻撃力の+130%の物理ダメージを目標に与え、投擲物は敵の間を複数回跳躍する(最大3回)</td><td></td></tr>
 <tr unimplemented><td>ブリジット</td><td>5</td><td>狙撃</td><td>旋輪射手</td><td>スキル2</td><td>可驯服的</td><td>攻撃回復</td><td>手動発動</td><td>5</td><td>25</td><td>25</td><td>攻撃力+50%、投擲物は命中後目標に付着し、1秒間の足止めと追加の斬撃を4回行う</td><td></td></tr>
 </table>
-
     <script>
-//===============================================================
+//==============================================================
 //  各種初期設定
-//===============================================================
-var gTabldID    = 'skillTable';  // テーブルのエリアのIDを設定
+//==============================================================
+var gTabldID    = 'skillTable';  //テーブルのエリアのIDを設定
 var gTfStartRow = 0;
-var gTfColList  = [];            // ボタンが配置されている列番号
-var gTfListSave = {};            // フィルタリストの保存状態
-var gButtonID   = 'property';    // propertyボタンのIDを設定
-var gNtag       = 12;            // タグの行番号
-var gNskillname = 5;             // スキル名の行番号
-var gOpButtonID = 'Op';        // オペレーターボタンのIDを設定
+var gTfColList  = [];            //ボタンが配置されている列番号
+var gTfListSave = {};            //フィルタリストの保存状態
+var gButtonID   = 'property';    //propertyボタンのIDを設定
+var gOpButtonID = 'Op';          //オペレーターボタンのIDを設定
+var gNtag       = 12;            //タグの行番号
+var gNskillname = 5;             //スキル名の行番号
  
-//===============================================================
-//  各種初期設定
-//===============================================================
+//==============================================================
+//  オペレーターのカテゴリ名とタグの設定
+//==============================================================
 var gCateLits   = ['スキルあり', 'スキルなし', '統合戦略専用', '国内未実装'];
 var gTagList    = ['', 'noSkill', 'onlyIS', 'unimplemented']
  
-//===============================================================
+//==============================================================
 //  オンロードでテーブル初期設定関数をCALL
-//===============================================================
+//==============================================================
 window.onload = function() {
   tFilterTHInit();  //列操作の初期関数
   tFilterInit();    //行操作の初期関数
@@ -1478,91 +1456,35 @@ window.onload = function() {
 }
 
 //==============================================================
-//  デフォルト非表示のオペレーターを表示するオプション
-//==============================================================
-function hidden_operator(checked, label_name){
-  const table  = document.getElementById(gTabldID);
-  var tag = '';
-
-  resetRowspan();
-  //表を非表示にして高速化
-  table.style.display = 'none';
-
-  //スキルなしの表示非表示
-  if(label_name == 'noSkill'){
-    for (let i = 1; i < table.rows.length; i++){
-      if(table.rows[i].cells[gNskillname].innerText == ''){
-        if(checked){
-          table.rows[i].removeAttribute(label_name);
-        }else{
-          table.rows[i].setAttribute(label_name,'');
-        }
-      }
-    }
-
-  }else{
-  
-    //未実装と統合戦略専用の表示非表示
-    if(label_name == 'unimplemented'){
-      searchText = 'UN'
-    }else if(label_name == 'onlyIS'){
-      searchText = 'OI'
-    }
-    
-    for (let i = 1; i < table.rows.length; i++){
-      if(table.rows[i].getAttribute(searchText) !== null){
-        if(checked){
-          table.rows[i].removeAttribute(label_name);
-        }else{
-          table.rows[i].setAttribute(label_name,'');
-        }
-      }
-    }
-  }
-
-  //表を再表示
-  table.style.display = '';
-  setRowspan();
-}
-
-//==============================================================
 //  テーブル内フィルタの初期設定
 //==============================================================
 function tFilterInit(){
-  var table  = document.getElementById(gTabldID);
-  var tr     = table.rows;
-  var addBtn = '';
+  var table     = document.getElementById(gTabldID);
+  var addBtn    = '';
 
   //表を非表示にして高速化
   table.style.display = 'none';
   
   //テーブル内をフィルタボタンを付ける
-  for(let i = 0; i < tr.length; i++){
- 
-    var td = table.rows[i].cells;
- 
-    for(let j = 0; j < td.length; j++){
- 
+  for(let i = 0; i < table.rows.length; i++){
+     var td = table.rows[i].cells;
+     for(let j = 0; j < td.length; j++){
       //「cmanFilterBtn」の定義があるセルを対象とする
       if(td[j].getAttribute('cmanFilterBtn') !== null){
- 
         //フィルタ対象はボタンの次の行から
         gTfStartRow = i + 1;
- 
         //ボタンを追加（画像はsvgを使用）
         addBtn  = '<div class="tfArea">';
-        addBtn += '<svg class="tfImg" id="tsBtn_'+j+'" onclick="tFilterCloseOpen('+j+')"><path d="M0 0 L8 0 L5 4 L5 8 L3 8 L3 4Z"></path></svg>';
-        addBtn += '<div class="tfList" id="tfList_'+j+'" style="display:none">';
+        addBtn += '<svg class="tfImg" id="tsBtn_' + j + '" onclick="tFilterCloseOpen(' + j + ')"><path d="M0 0 L8 0 L5 4 L5 8 L3 8 L3 4Z"></path></svg>';
+        addBtn += '<div class="tfList" id="tfList_' + j + '" style="display:none">';
         addBtn += tFilterCreate(j);
         addBtn += '</div>';
         addBtn += '</div>';
-        td[j].innerHTML = td[j].innerHTML+addBtn;
- 
+        td[j].innerHTML = td[j].innerHTML + addBtn;
         //フィルタボタンの列を保存
         gTfColList.push(j);
       }
     }
- 
     //ボタンを付けたら以降の行は無視する
     if(addBtn != ''){
       gSortBtnRow = i;
@@ -1572,10 +1494,8 @@ function tFilterInit(){
 
   //表を再表示
   table.style.display = '';
-
   //セルの結合を行う
   setRowspan();
-
 }
 
 //==============================================================
@@ -1583,205 +1503,178 @@ function tFilterInit(){
 //==============================================================
 function tFilterCreate(argCol){
  
-  var wTABLE    = document.getElementById(gTabldID);
-  var tr       = wTABLE.rows;
-  var wItem     = [];              // クリックされた列の値
-  var wNotNum   = 0;               // 数字列かの判定 0:数字 1:数字でない
-  var wItemSave = {};              // フィルタに設定した値がキー
-  var rcList    = '';              // 返すフィルタリスト
+  var table     = document.getElementById(gTabldID);
+  var tr        = table.rows;
+  var item      = [];              //クリックされた列の値
+  var notNum    = 0;               //数字列かの判定 0:数字 1:数字でない ※ハイフン「-」は数字とみなす
+  var itemSave  = {};              //フィルタに設定した値がキー
+  var rcList    = '';              //返すフィルタリスト
  
   //クリックされた列の値を取得する
   var n_item = 0;
-  for(let i=gTfStartRow; i < tr.length; i++){
-
-    //タグ列は改行で分割する
+  for(let i = gTfStartRow; i < tr.length; i++){
+    //タグ列は改行またはスペースで分割する
     if(argCol == gNtag){
       var wTags = tr[i].cells[argCol].innerText.split(/\r\n|\n|\r|\s/);
       for(let k = 0; k < wTags.length; k++){
-        wItem[n_item] = wTags[k];
-        if(!(wItem[n_item].match(/^[-]?[0-9,\.]*$/))){
-          wNotNum = 1;
+        item[n_item] = wTags[k];
+        if(!(item[n_item].match(/^[-]?[0-9,\.]*$/))){
+          notNum = 1;
         }
         n_item++;
       }
     }else{ 
       //タグ列以外はそのまま
-      wItem[n_item] = tr[i].cells[argCol].innerText.toString();
+      item[n_item] = tr[i].cells[argCol].innerText;
  
-      if(!(wItem[n_item].match(/^[-]?[0-9,\.]*$/))){
-        wNotNum = 1;
+      if(!(item[n_item].match(/^[-]?[0-9,\.]*$/))){
+        notNum = 1;
       }
       n_item++;
     }
   }
  
-    //列の値でソートを実行
-    if(wNotNum == 0){
-      wItem.sort(sortNumA);  //数値で昇順
-    }else{
-      wItem.sort(sortStrA);  //文字で昇順
-    }
+  //列の値でソートを実行
+  if(notNum){
+    item.sort(sortStrA);  //文字で昇順
+  }else{
+    item.sort(sortNumA);  //数値で昇順
+  }
  
-  // 「すべて」のチェックボックス作成
-  var wItemId = 'tfData_ALL_'+argCol;
+  //「すべて」のチェックボックス作成
+  var itemId = 'tfData_ALL_' + argCol;
  
   rcList += '<div class="tfMeisai">';
-  rcList += '<input type="checkbox" id="'+wItemId+'" checked onclick="tFilterAllSet('+argCol+')">';
-  rcList += '<label for="'+wItemId+'">(すべて)</label>';
+  rcList += '<input type="checkbox" id="' + itemId + '" checked onclick="tFilterAllSet(' + argCol + ')">';
+  rcList += '<label for="' + itemId + '">(すべて)</label>';
   rcList += '</div>';
  
-  // ------------------------------------------------------------
-  //  列の値でフィルタのチェックボックスを作成する
-  //    チェックボックスはformで囲む
-  // ------------------------------------------------------------
-  rcList += '<form name="tfForm_'+argCol+'">';
+  //列の値でフィルタのチェックボックスを作成する
+  rcList += '<form name="tfForm_' + argCol + '">';
  
-  for(let i=0; i < wItem.length; i++){
- 
-    wVal = trim(wItem[i]);
- 
-    if(wVal in wItemSave){
-      // ---値でチェックボックスが作成されている(重複) ----------
+  for(let i=0; i < item.length; i++){
+     val = trim(item[i]);
+    //重複判定
+    if(val in itemSave){
     }else{
- 
-      // ---チェックボックスの作成 ------------------------------
-      wItemId = 'tfData_'+argCol+'_r'+i;
+      //チェックボックスの作成
+      itemId = 'tfData_' + argCol + '_r' + i;
       rcList += '<div class="tfMeisai">';
-      rcList += '<input type="checkbox" id="'+wItemId+'" value="'+wVal+'" checked onclick="tFilterClick('+argCol+')">';
-      rcList += '<label for="'+wItemId+'">'+( wVal=='' ? '(空白)' : wVal )+'</label>';
+      rcList += '<input type="checkbox" id="' + itemId + '" value="' + val + '" checked onclick="tFilterClick(' + argCol + ')">';
+      rcList += '<label for="' + itemId + '">' + (val == '' ? '(空白)' : val) + '</label>';
       rcList += '</div>';
- 
-      // ---重複判定用にチェックボックスの値を保存 --------------
-      wItemSave[wVal]='1';
+      //重複判定用にチェックボックスの値を保存
+      itemSave[val]='1';
     }
   }
   rcList += '</form>';
  
-  // ------------------------------------------------------------
-  //  文字抽出のinputを作成
-  // ------------------------------------------------------------
+  //文字抽出用のinputを作成
   rcList += '<div class="tfInStr">';
-  rcList += '<input type="text" placeholder="含む文字抽出" id="tfInStr_'+argCol+'">';
+  rcList += '<input type="text" placeholder="含む文字抽出" id="tfInStr_' + argCol + '">';
   rcList += '</div>';
  
-  // ------------------------------------------------------------
-  //  「OK」「Cancel」「ソート」ボタンの作成
-  // ------------------------------------------------------------
+  //「OK」「Cancel」「ソート」ボタンの作成
   rcList += '<div class="tfBtnArea">';
   rcList += '<input type="button" value="OK" onclick="tFilterGo()">';
-  rcList += '<input type="button" value="Cancel" onclick="tFilterCancel('+argCol+')">';
-  rcList += '<input type="button" value="↑" onclick="sortAsc('+argCol+')">';
-  rcList += '<input type="button" value="↓" onclick="sortDesc('+argCol+')">';
+  rcList += '<input type="button" value="Cancel" onclick="tFilterCancel(' + argCol + ')">';
+  rcList += '<input type="button" value="↑" onclick="sortAsc(' + argCol + ')">';
+  rcList += '<input type="button" value="↓" onclick="sortDesc(' + argCol + ')">';
   rcList += '</div>';
  
-  // ------------------------------------------------------------
-  //  作成したhtmlを返す
-  // ------------------------------------------------------------
+  //作成したhtmlを返す
   return rcList;
- 
 }
 
-
+//==============================================================
+//  クリック時「すべて」チェックボックスの整合性を合わせる
+//==============================================================
 function tFilterClick(argCol){
- //==============================================================
- //  フィルタリストのチェックボックスクリック
- //    「すべて」のチェックボックスと整合性を合わせる
- //==============================================================
-  var wForm   = document.forms['tfForm_'+argCol];
-  var wCntOff = 0;
-  var wAll    = document.getElementById('tfData_ALL_'+argCol);   // 「すべて」のチェックボックス
+  var form      = document.forms['tfForm_' + argCol];
+  var wCntOff   = 0;
+  var all       = document.getElementById('tfData_ALL_' + argCol);   // 「すべて」のチェックボックス
  
-  // --- 各チェックボックスの状態を集計する ---------------------
-  for (let i = 0; i < wForm.elements.length; i++){
-    if(wForm.elements[i].type == 'checkbox'){
-      if (wForm.elements[i].checked == false){
-        wCntOff++;
+  //各チェックボックスの状態を集計する
+  for (let i = 0; i < form.elements.length; i++){
+    if(form.elements[i].type == 'checkbox'){
+      if (form.elements[i].checked == false){
+        wCntOff = 1;
+        break;
       }
     }
   }
  
-  // --- 各チェックボックス集計で「すべて」を整備する -----------
-  if(wCntOff == 0){
-    wAll.checked = true;             // 「すべて」をチェックする
-    tFilterAllSet(argCol);           // 各フィルタのチェックする
+  //各チェックボックス集計で「すべて」を整備する
+  if(wCntOff){
+    all.checked = false;           // 「すべて」をチェックを外す
   }else{
-     wAll.checked = false;           // 「すべて」をチェックを外す
+    all.checked = true;            // 「すべて」をチェックする
+    tFilterAllSet(argCol);          // 各フィルタのチェックする
   }
 }
 
+//==============================================================
+//  キャンセルボタン押下
+//==============================================================
 function tFilterCancel(argCol){
- //==============================================================
- //  キャンセルボタン押下
- //==============================================================
- 
   tFilterSave(argCol, 'load');    // フィルタ条件の復元
   tFilterCloseOpen('');           // フィルタリストを閉じる
- 
 }
 
+//==============================================================
+//  フィルタの実行
+//==============================================================
 function tFilterGo(){
- //===============================================================
- //  フィルタの実行
- //===============================================================
-  var wTABLE  = document.getElementById(gTabldID);
-  var tr     = wTABLE.rows;
+  var table     = document.getElementById(gTabldID);
+  var tr        = table.rows;
 
   resetRowspan();
  
-  // --- 表を非表示----------------------------------------------
-  wTABLE.style.display = 'none';
+  //表を非表示
+  table.style.display = 'none';
 
-  // ------------------------------------------------------------
-  //  全ての非表示を一旦クリア
-  // ------------------------------------------------------------
+  //全ての非表示を一旦クリア
   for(let i = 0; i < tr.length; i++){
     if(tr[i].getAttribute('cmanFilterNone') !== null){
       tr[i].removeAttribute('cmanFilterNone');
     }
   }
  
-  // ------------------------------------------------------------
-  //  フィルタボタンのある列を繰り返す
-  // ------------------------------------------------------------
+  //フィルタボタンのある列を繰り返す
   for(var wColList = 0; wColList < gTfColList.length; wColList++){
     var wCol       = gTfColList[wColList];
-    var wAll       = document.getElementById('tfData_ALL_'+wCol);     // 「すべて」のチェックボックス
-    var wItemSave  = {};
-    var wFilterBtn =  document.getElementById('tsBtn_'+wCol);
-    var wFilterStr =  document.getElementById('tfInStr_'+wCol);
- 
-    var wForm      = document.forms['tfForm_'+wCol];
-    // -----------------------------------------------------------
-    //  チェックボックスの整備（「すべて」の整合性）
-    // -----------------------------------------------------------
-    for (let i = 0; i < wForm.elements.length; i++){
-      if(wForm.elements[i].type == 'checkbox'){
-        if (wForm.elements[i].checked) {
-          wItemSave[wForm.elements[i].value] = 1;      // チェックされている値を保存
+    var all       = document.getElementById('tfData_ALL_'+wCol);     // 「すべて」のチェックボックス
+    var itemSave  = {};
+    var filterBtn = document.getElementById('tsBtn_'+wCol);
+    var wFilterStr = document.getElementById('tfInStr_'+wCol);
+    var form      = document.forms['tfForm_'+wCol];
+
+    //チェックボックスの整備（「すべて」の整合性）
+    for (let i = 0; i < form.elements.length; i++){
+      if(form.elements[i].type == 'checkbox'){
+        if (form.elements[i].checked) {
+          itemSave[form.elements[i].value] = 1;      // チェックされている値を保存
         }
       }
     }
  
-    // -----------------------------------------------------------
-    //  フィルタ（非表示）の設定
-    // -----------------------------------------------------------
-    if((wAll.checked)&&(trim(wFilterStr.value) == '')){
-      wFilterBtn.style.backgroundColor = '';              // フィルタなし色
+    //フィルタ（非表示）の設定
+    if((all.checked)&&(trim(wFilterStr.value) == '')){
+      filterBtn.style.backgroundColor = '';           // フィルタなし色
     }
     else{
-      wFilterBtn.style.backgroundColor = '#999';       // フィルタあり色
+      filterBtn.style.backgroundColor = '#999';       // フィルタあり色
  
       for(let i=gTfStartRow; i < tr.length; i++){
+        var val = trim(tr[i].cells[wCol].innerText);
  
-        var wVal = trim(tr[i].cells[wCol].innerText.toString());
- 
-        // --- チェックボックス選択によるフィルタ ----------------
-        if(!wAll.checked){
+        //チェックボックス選択によるフィルタ
+        if(!all.checked){
           if(wCol  == gNtag){
-            var wTags = wVal.split(/\r\n|\n|\r/);
+            var wTags = val.split(/\r\n|\n|\r/);
             let checker = 0;
             for(let k = 0; k < wTags.length; k++){
-              if(wTags[k] in wItemSave){
+              if(wTags[k] in itemSave){
                 checker = 1;
               }
             }
@@ -1790,7 +1683,7 @@ function tFilterGo(){
             }
   
           }else{
-            if(wVal in wItemSave){
+            if(val in itemSave){
             }
             else{
               tr[i].setAttribute('cmanFilterNone','');
@@ -1798,10 +1691,10 @@ function tFilterGo(){
           }
         }
  
-        // --- 抽出文字によるフィルタ ----------------------------
+        //抽出文字によるフィルタ
         if(wFilterStr.value != ''){
           reg = new RegExp(wFilterStr.value);
-          if(wVal.match(reg)){
+          if(val.match(reg)){
           }
           else{
             tr[i].setAttribute('cmanFilterNone','');
@@ -1813,82 +1706,82 @@ function tFilterGo(){
  
   tFilterCloseOpen('');
 
-  // --- 表を再表示----------------------------------------------
-  wTABLE.style.display = '';
-  
+  //表を再表示
+  table.style.display = '';
+  //セルの結合を行う
   setRowspan();
 }
 
+//==============================================================
+//  フィルタリストの保存または復元
+//==============================================================
 function tFilterSave(argCol, argFunc){
- //==============================================================
- //  フィルタリストの保存または復元
- //==============================================================
- 
-  // ---「すべて」のチェックボックス値を保存 ------------------
-  var wAllCheck = document.getElementById('tfData_ALL_'+argCol);
+  //「すべて」のチェックボックス値を保存
+  var allCheck = document.getElementById('tfData_ALL_' + argCol);
   if(argFunc == 'save'){
-    gTfListSave[wAllCheck.id] = wAllCheck.checked;
+    gTfListSave[allCheck.id] = allCheck.checked;
   }else{
-    wAllCheck.checked = gTfListSave[wAllCheck.id];
+    allCheck.checked = gTfListSave[allCheck.id];
   }
  
-  // --- 各チェックボックス値を保存 ---------------------------
-  var wForm    = document.forms['tfForm_'+argCol];
-  for (let i = 0; i < wForm.elements.length; i++){
-    if(wForm.elements[i].type == 'checkbox'){
+  //各チェックボックス値を保存
+  var form    = document.forms['tfForm_' + argCol];
+  for (let i = 0; i < form.elements.length; i++){
+    if(form.elements[i].type == 'checkbox'){
       if(argFunc == 'save'){
-        gTfListSave[wForm.elements[i].id] = wForm.elements[i].checked;
+        gTfListSave[form.elements[i].id] = form.elements[i].checked;
       }else{
-        wForm.elements[i].checked = gTfListSave[wForm.elements[i].id];
+        form.elements[i].checked = gTfListSave[form.elements[i].id];
       }
     }
   }
  
-  // --- 含む文字の入力を保存 ---------------------------------
-  var wStrInput = document.getElementById('tfInStr_'+argCol);
-  if(argFunc == 'save'){
-    gTfListSave[wStrInput.id] = wStrInput.value;
-  }else{
-    wStrInput.value = gTfListSave[wStrInput.id];
+  //含む文字の入力を保存
+  if(argCol != 'Op' && argCol != 'TH'){
+    var wStrInput = document.getElementById('tfInStr_' + argCol);
+    if(argFunc == 'save'){
+      gTfListSave[wStrInput.id] = wStrInput.value;
+    }else{
+      wStrInput.value = gTfListSave[wStrInput.id];
+    }
   }
 }
 
+//==============================================================
+//  フィルタを閉じて開く
+//==============================================================
 function tFilterCloseOpen(argCol){
- //==============================================================
- //  フィルタを閉じて開く
- //==============================================================
  
-  // --- フィルタリストを一旦すべて閉じる -----------------------
-  for(let i=0; i < gTfColList.length; i++){
+  //フィルタリストを一旦すべて閉じる
+  for(let i = 0; i < gTfColList.length; i++){
     document.getElementById("tfList_"+gTfColList[i]).style.display = 'none';
   }
-    document.getElementById("tfList_TH").style.display = 'none'; //後付け
-    document.getElementById("tfList_Op").style.display = 'none'; //後付け
+  document.getElementById("tfList_TH").style.display = 'none';
+  document.getElementById("tfList_Op").style.display = 'none';
  
-  // --- 指定された列のフィルタリストを開く ---------------------
-  if(argCol.toString() != ''){
-    document.getElementById("tfList_"+argCol).style.display = '';
+  //指定された列のフィルタリストを開く
+  if(argCol != ''){
+    document.getElementById("tfList_" + argCol).style.display = '';
  
-    // --- フィルタ条件の保存（キャンセル時に復元するため） -----
+    //フィルタ条件の保存（キャンセル時に復元するため）
     tFilterSave(argCol, 'save');
- 
   }
 }
 
+//==============================================================
+//  「すべて」のチェック状態に合わせて各チェックをON/OFF
+//==============================================================
 function tFilterAllSet(argCol){
- //==============================================================
- //  「すべて」のチェック状態に合わせて、各チェックをON/OFF
- //==============================================================
   var wChecked = false;
-  var wForm    = document.forms['tfForm_'+argCol];
+  var form    = document.forms['tfForm_' + argCol];
  
-  if(document.getElementById('tfData_ALL_'+argCol).checked){
+  if(document.getElementById('tfData_ALL_' + argCol).checked){
     wChecked = true;
   }
  
-  for (let i = 0; i < wForm.elements.length; i++){
-    if(wForm.elements[i].type == 'checkbox'){
-      wForm.elements[i].checked = wChecked;
+  for (let i = 0; i < form.elements.length; i++){
+    if(form.elements[i].type == 'checkbox'){
+      form.elements[i].checked = wChecked;
     }
   }
 }
@@ -1935,80 +1828,79 @@ function trim(argStr){
  //  表のソート
  //==============================================================
 function sortAsc(argCol){
-        const table = document.getElementById(gTabldID);
-        const records = [];
-        var wNotNum = 0;
-        
+  const table = document.getElementById(gTabldID);
+  const records = [];
+  var notNum = 0;
+  
   resetRowspan();
 
-        for (let i = 1; i < table.rows.length; i++) {
-          const record = {};
-          record.row = table.rows[i];
-          record.key = table.rows[i].cells[argCol].textContent;
-          records.push(record);
-          if(!record.key.match(/^[-]?[0-9,\.]*$/)){
-              wNotNum = 1;
-          }
-        }
-      if(wNotNum == 0){
-        records.sort(compareKeysNum);        // 数値で昇順
-      }else{
-        records.sort(compareKeys);           // 文字で昇順
-      }
+  for (let i = 1; i < table.rows.length; i++) {
+    const record = {};
+    record.row = table.rows[i];
+    record.key = table.rows[i].cells[argCol].textContent;
+    records.push(record);
+    if(!record.key.match(/^[-]?[0-9,\.]*$/)){
+        notNum = 1;
+    }
+  }
+  if(notNum == 0){
+    records.sort(compareKeysNum);        // 数値で昇順
+  }else{
+    records.sort(compareKeys);           // 文字で昇順
+  }
 
-        for (let i = 0; i < records.length; i++) {
-          table.appendChild(records[i].row);
-        }
-        
-        tFilterGo();
-
+  for (let i = 0; i < records.length; i++) {
+    table.appendChild(records[i].row);
+  }
+  
+  tFilterGo();
   setRowspan();
 
 }
 
 function sortDesc(argCol){
-        const table = document.getElementById(gTabldID);
-        const records = [];
-        var wNotNum = 0;
-        
+  const table = document.getElementById(gTabldID);
+  const records = [];
+  var notNum = 0;
+  
   resetRowspan();
 
-        for (let i = 1; i < table.rows.length; i++) {
-          const record = {};
-          record.row = table.rows[i];
-          record.key = table.rows[i].cells[argCol].textContent;
-          records.push(record);
-          if(!record.key.match(/^[-]?[0-9,\.]*$/)){
-              wNotNum = 1;
-          }
-        }
-      if(wNotNum == 0){
-        records.sort(compareKeysDecNum);        // 数値で降順
-      }else{
-        records.sort(compareKeysDec);           // 文字で降順
-      }
+  for (let i = 1; i < table.rows.length; i++) {
+    const record = {};
+    record.row = table.rows[i];
+    record.key = table.rows[i].cells[argCol].textContent;
+    records.push(record);
+    if(!record.key.match(/^[-]?[0-9,\.]*$/)){
+        notNum = 1;
+    }
+  }
+  if(notNum == 0){
+    records.sort(compareKeysDecNum);        // 数値で降順
+  }else{
+    records.sort(compareKeysDec);           // 文字で降順
+  }
 
-        for (let i = 0; i < records.length; i++) {
-          table.appendChild(records[i].row);
-        }
-        
-        tFilterGo();
+  for (let i = 0; i < records.length; i++) {
+    table.appendChild(records[i].row);
+  }
+  
+  tFilterGo();
 
   setRowspan();
 }
 
 function compareKeys(a, b) {
-      if (a.key < b.key) return -1;
-      if (a.key > b.key) return 1;
-    return 0;
+  if (a.key < b.key) return -1;
+  if (a.key > b.key) return 1;
+  return 0;
 }
 
 function compareKeysNum(a, b){
   let intA;
   let intB;
 
-    intA = (!a.key)?(-2):(isFinite(a.key) ? Number(a.key) : -1);
-    intB = (!b.key)?(-2):(isFinite(b.key) ? Number(b.key) : -1);
+  intA = (!a.key)?(-2):(isFinite(a.key) ? Number(a.key) : -1);
+  intB = (!b.key)?(-2):(isFinite(b.key) ? Number(b.key) : -1);
 
   return intA - intB;
 }
@@ -2037,29 +1929,29 @@ function compareKeysDecNum(a, b){
  //==============================================================
  //  テーブルの初期設定
  //==============================================================
-  var wTABLE  = document.getElementById(gTabldID);
-  var tr     = wTABLE.rows;
+  var table  = document.getElementById(gTabldID);
+  var tr     = table.rows;
   var addBtn = '';
   var wBtn  = document.createElement('div');
  
   // --- 表を非表示----------------------------------------------
-  wTABLE.style.display = 'none';
+  table.style.display = 'none';
   
   // ------------------------------------------------------------
   //   ボタン領域を表の前に挿入する
   // ------------------------------------------------------------
   wBtn.id = gButtonID;     //idを付ける
-  wTABLE.before(wBtn);
+  table.before(wBtn);
 
   // --- ボタンを追加 -------------------------------------------
   addBtn  = '<span class="btArea">';
-  addBtn += '<input type="button" value="表示項目の選択" onclick="tFilterTHCloseOpen()"/>'
+  addBtn += '<input type="button" value="表示項目の選択" onclick="tFilterCloseOpen(&quot;TH&quot;)"/>'
   addBtn += '<span class="tfList" id="tfList_TH" style="display:none">';
   addBtn += tFilterTHCreate();
   addBtn += '</span>';
   addBtn += '</span>';
   addBtn += '<span class="btArea">';
-  addBtn += '<input type="button" value="カテゴリーの選択" onclick="tFilterOpCloseOpen()"/>'
+  addBtn += '<input type="button" value="カテゴリーの選択" onclick="tFilterCloseOpen(&quot;Op&quot;)"/>'
   addBtn += '<span class="tfList" id="tfList_Op" style="display:none">';
   addBtn += tFilterOpCreate();
   addBtn += '</span>';
@@ -2070,7 +1962,7 @@ function compareKeysDecNum(a, b){
   // --- フィルタボタンなる列を保存 -----------------------
   //gTfColList.push(j);
   // --- 表を再表示----------------------------------------------
-  wTABLE.style.display = '';
+  table.style.display = '';
 }
 
 function tFilterTHCreate(){
@@ -2078,27 +1970,27 @@ function tFilterTHCreate(){
  //  先頭行のフィルタリスト作成
  //==============================================================
  
-  var wTABLE    = document.getElementById(gTabldID);
-  var wTF       = wTABLE.rows[0].cells;
-  var wItem     = [];              // クリックされた列の値
-  var wItemSave = {};              // フィルタに設定した値がキー
+  var table     = document.getElementById(gTabldID);
+  var tf        = table.rows[0].cells;
+  var item      = [];              // クリックされた列の値
+  var itemSave  = {};              // フィルタに設定した値がキー
   var rcList    = '';              // 返すフィルタリスト
  
   // ------------------------------------------------------------
   //  先頭行の値を取得する
   // ------------------------------------------------------------
-  for(let i=0; i < wTF.length; i++){
-    wItem[i] = wTF[i].innerText.toString();
+  for(let i=0; i < tf.length; i++){
+    item[i] = tf[i].innerText;
   }
  
   // ------------------------------------------------------------
   //  「すべて」のチェックボックス作成
   // ------------------------------------------------------------
-  var wItemId = 'tfData_ALL_TH';
+  var itemId = 'tfData_ALL_TH';
  
   rcList += '<div class="tfMeisai">';
-  rcList += '<input type="checkbox" id="'+wItemId+'" checked onclick="tFilterTHAllSet()">';
-  rcList += '<label for="'+wItemId+'">(すべて)</label>';
+  rcList += '<input type="checkbox" id="'+itemId+'" checked onclick="tFilterAllSet(&quot;TH&quot;)">';
+  rcList += '<label for="'+itemId+'">(すべて)</label>';
   rcList += '</div>';
  
   // ------------------------------------------------------------
@@ -2107,23 +1999,23 @@ function tFilterTHCreate(){
   // ------------------------------------------------------------
   rcList += '<form name="tfForm_TH">';
  
-  for(let i=0; i < wItem.length; i++){
+  for(let i=0; i < item.length; i++){
  
-    wVal = trim(wItem[i]);
+    val = trim(item[i]);
  
-    if(wVal in wItemSave){
+    if(val in itemSave){
       // ---値でチェックボックスが作成されている(重複) ----------
     }else{
  
       // ---チェックボックスの作成 ------------------------------
-      wItemId =  'tfData_TH_r'+i;
+      itemId =  'tfData_TH_r'+i;
       rcList += '<div class="tfMeisai">';
-      rcList += '<input type="checkbox" id="'+wItemId+'" value="'+wVal+'" checked onclick="tFilterTHClick()">';
-      rcList += '<label for="'+wItemId+'">'+( wVal=='' ? '(空白)' : wVal )+'</label>';
+      rcList += '<input type="checkbox" id="'+itemId+'" value="'+val+'" checked onclick="tFilterClick(&quot;TH&quot;)">';
+      rcList += '<label for="'+itemId+'">'+( val=='' ? '(空白)' : val )+'</label>';
       rcList += '</div>';
  
       // ---重複判定用にチェックボックスの値を保存 --------------
-      wItemSave[wVal]='1';
+      itemSave[val] = '1';
     }
   }
   rcList += '</form>';
@@ -2133,7 +2025,7 @@ function tFilterTHCreate(){
   // ------------------------------------------------------------
   rcList += '<div class="tfBtnArea">';
   rcList += '<input type="button" value="OK" onclick="tFilterTHGo()">';
-  rcList += '<input type="button" value="Cancel" onclick="tFilterTHCancel()">';
+  rcList += '<input type="button" value="Cancel" onclick="tFilterCancel(&quot;TH&quot;)">';
   rcList += '</div>';
  
   // ------------------------------------------------------------
@@ -2143,97 +2035,60 @@ function tFilterTHCreate(){
  
 }
 
-function tFilterTHClick(){
- //==============================================================
- //  フィルタリストのチェックボックスクリック
- //    「すべて」のチェックボックスと整合性を合わせる
- //==============================================================
-  var wForm   = document.forms['tfForm_TH'];
-  var wCntOff = 0;
-  var wAll    = document.getElementById('tfData_ALL_TH');   // 「すべて」のチェックボックス
- 
-  // --- 各チェックボックスの状態を集計する ---------------------
-  for (let i = 0; i < wForm.elements.length; i++){
-    if(wForm.elements[i].type == 'checkbox'){
-      if (wForm.elements[i].checked == false){
-        wCntOff++;
-      }
-    }
-  }
- 
-  // --- 各チェックボックス集計で「すべて」を整備する -----------
-  if(wCntOff == 0){
-    wAll.checked = true;             // 「すべて」をチェックする
-    tFilterTHAllSet();           // 各フィルタのチェックする
-  }else{
-     wAll.checked = false;           // 「すべて」をチェックを外す
-  }
-}
-
-function tFilterTHCancel(){
- //==============================================================
- //  キャンセルボタン押下
- //==============================================================
- 
-  tFilterTHSave('load');    // フィルタ条件の復元
-  tFilterCloseOpen('');           // フィルタリストを閉じる
-}
-
 function tFilterTHGo(){
  //===============================================================
  //  フィルタの実行
  //===============================================================
-  var wTABLE  = document.getElementById(gTabldID);
-  var tr     = wTABLE.rows;
+  var table  = document.getElementById(gTabldID);
+  var tr     = table.rows;
 
   resetRowspan();
   // --- 表を非表示----------------------------------------------
-  wTABLE.style.display = 'none';
+  table.style.display = 'none';
 
   // ------------------------------------------------------------
   //  全ての非表示を一旦クリア
   // ------------------------------------------------------------
   for(let i = 0; i < tr.length; i++){
-    for(let j = 0; j < tr[i].cells.length; j++)
-    if(tr[i].cells[j].getAttribute('thFilterNone') !== null){
-      tr[i].cells[j].removeAttribute('thFilterNone');
+    for(let j = 0; j < tr[i].cells.length; j++){
+      if(tr[i].cells[j].getAttribute('thFilterNone') !== null){
+        tr[i].cells[j].removeAttribute('thFilterNone');
+      }
     }
   }
  
   // ------------------------------------------------------------
   //  フィルタボタンのある列を繰り返す
   // ------------------------------------------------------------
-    var wAll       = document.getElementById('tfData_ALL_TH');     // 「すべて」のチェックボックス
-    var wItemSave  = {};
-    var wFilterBtn =  document.getElementById('tsBtn_TH');
-    var wItemList  = [];
-    var x=0;
- 
-    var wForm      = document.forms['tfForm_TH'];
-    // -----------------------------------------------------------
-    //  チェックボックスの整備（「すべて」の整合性）
-    // -----------------------------------------------------------
+  var all       = document.getElementById('tfData_ALL_TH');     // 「すべて」のチェックボックス
+  var filterBtn = document.getElementById('tsBtn_TH');
+  var itemList  = [];
+  var itemSave  = {};
+  var form      = document.forms['tfForm_TH'];
+  // -----------------------------------------------------------
+  //  チェックボックスの整備（「すべて」の整合性）
+  // -----------------------------------------------------------
 
-    for (let i = 0; i < wForm.elements.length; i++){
-      if(wForm.elements[i].type == 'checkbox'){
-        if (wForm.elements[i].checked) {
-          wItemSave[wForm.elements[i].value] = 1;      // チェックされている値を保存
-        }
+  for (let i = 0; i < form.elements.length; i++){
+    if(form.elements[i].type == 'checkbox'){
+      if (form.elements[i].checked) {
+        itemSave[form.elements[i].value] = 1;      // チェックされている値を保存
       }
     }
+  }
 
-  // --- 表を再表示----------------------------------------------
-  wTABLE.style.display = ''; //ここにないとなぜか不具合が出る要確認
- 
+  // --- ここで再表示しないとなぜか判定できない -----------------
+  table.style.display = '';
+
     // -----------------------------------------------------------
     //  フィルタ（非表示）の設定
     // -----------------------------------------------------------
-  if(!(wAll.checked)){
+  if(!(all.checked)){
     for(let i=0; i < tr[0].cells.length; i++){
-      var wVal = trim(tr[0].cells[i].innerText.toString());
+      let val = trim(tr[0].cells[i].innerText);
 
       // --- チェックボックス選択によるフィルタ ----------------
-      if((wVal in wItemSave) == false){
+      if((val in itemSave) == false){
         for(let j = 0; j < tr.length; j++){
             tr[j].cells[i].setAttribute('thFilterNone','');
         }
@@ -2242,73 +2097,10 @@ function tFilterTHGo(){
   }
  
   // --- 表を再表示----------------------------------------------
-  wTABLE.style.display = '';
+  table.style.display = '';
 
   tFilterCloseOpen('');
   setRowspan();
-}
-
-function tFilterTHSave(argFunc){
- //==============================================================
- //  フィルタリストの保存または復元
- //==============================================================
- 
-  // ---「すべて」のチェックボックス値を保存 ------------------
-  var wAllCheck = document.getElementById('tfData_ALL_TH');
-  if(argFunc == 'save'){
-    gTfListSave[wAllCheck.id] = wAllCheck.checked;
-  }else{
-    wAllCheck.checked = gTfListSave[wAllCheck.id];
-  }
- 
-  // --- 各チェックボックス値を保存 ---------------------------
-  var wForm    = document.forms['tfForm_TH'];
-  for (let i = 0; i < wForm.elements.length; i++){
-    if(wForm.elements[i].type == 'checkbox'){
-      if(argFunc == 'save'){
-        gTfListSave[wForm.elements[i].id] = wForm.elements[i].checked;
-      }else{
-        wForm.elements[i].checked = gTfListSave[wForm.elements[i].id];
-      }
-    }
-  }
- 
-}
-
-function tFilterTHCloseOpen(){
- //==============================================================
- //  フィルタを閉じて開く
- //==============================================================
- 
-  // --- フィルタリストを一旦すべて閉じる -----------------------
-  for(let i=0; i < gTfColList.length; i++){
-    document.getElementById("tfList_"+gTfColList[i]).style.display = 'none';
-  }
-  document.getElementById("tfList_Op").style.display = 'none'; //後付け
-
-  // --- フィルタリストを開く ---------------------
-  document.getElementById("tfList_TH").style.display = '';
-
-  // --- フィルタ条件の保存（キャンセル時に復元するため） -----
-  tFilterTHSave('save');
-}
-
-function tFilterTHAllSet(){
- //==============================================================
- //  「すべて」のチェック状態に合わせて、各チェックをON/OFF
- //==============================================================
-  var wChecked = false;
-  var wForm    = document.forms['tfForm_TH'];
- 
-  if(document.getElementById('tfData_ALL_TH').checked){
-    wChecked = true;
-  }
- 
-  for (let i = 0; i < wForm.elements.length; i++){
-    if(wForm.elements[i].type == 'checkbox'){
-      wForm.elements[i].checked = wChecked;
-    }
-  }
 }
 
 function tFilterOpCreate(){
@@ -2316,28 +2108,19 @@ function tFilterOpCreate(){
  //  先頭行のフィルタリスト作成
  //==============================================================
  
-  var wTABLE    = document.getElementById(gTabldID);
-  var wTF       = wTABLE.rows[0].cells;
-  var wItem     = [];              // クリックされた列の値
-  var wItemSave = {};              // フィルタに設定した値がキー
+  var table    = document.getElementById(gTabldID);
+  var item     = gCateLits;              // クリックされた列の値
+  var itemSave = {};              // フィルタに設定した値がキー
   var rcList    = '';              // 返すフィルタリスト
- 
-  // ------------------------------------------------------------
-  //  項目名の設定
-  // ------------------------------------------------------------
-  wItem[0] = 'スキルあり';
-  wItem[1] = 'スキルなし';
-  wItem[2] = '統合戦略専用';
-  wItem[3] = '国内未実装';
  
   // ------------------------------------------------------------
   //  「すべて」のチェックボックス作成
   // ------------------------------------------------------------
-  var wItemId = 'tfData_ALL_Op';
+  var itemId = 'tfData_ALL_Op';
  
   rcList += '<div class="tfMeisai">';
-  rcList += '<input type="checkbox" id="'+wItemId+'" checked onclick="tFilterOpAllSet()">';
-  rcList += '<label for="'+wItemId+'">(すべて)</label>';
+  rcList += '<input type="checkbox" id="'+itemId+'" checked onclick="tFilterAllSet(&quot;Op&quot;)">';
+  rcList += '<label for="'+itemId+'">(すべて)</label>';
   rcList += '</div>';
  
   // ------------------------------------------------------------
@@ -2346,23 +2129,23 @@ function tFilterOpCreate(){
   // ------------------------------------------------------------
   rcList += '<form name="tfForm_Op">';
  
-  for(let i=0; i < wItem.length; i++){
+  for(let i=0; i < item.length; i++){
  
-    wVal = trim(wItem[i]);
+    val = trim(item[i]);
  
-    if(wVal in wItemSave){
+    if(val in itemSave){
       // ---値でチェックボックスが作成されている(重複) ----------
     }else{
  
       // ---チェックボックスの作成 ------------------------------
-      wItemId =  'tfData_Op_r'+i;
+      itemId =  'tfData_Op_r'+i;
       rcList += '<div class="tfMeisai">';
-      rcList += '<input type="checkbox" id="'+wItemId+'" value="'+wVal+'" checked onclick="tFilterOpClick()">';
-      rcList += '<label for="'+wItemId+'">'+( wVal=='' ? '(空白)' : wVal )+'</label>';
+      rcList += '<input type="checkbox" id="'+itemId+'" value="'+val+'" checked onclick="tFilterClick(&quot;Op&quot;)">';
+      rcList += '<label for="'+itemId+'">'+( val=='' ? '(空白)' : val )+'</label>';
       rcList += '</div>';
  
       // ---重複判定用にチェックボックスの値を保存 --------------
-      wItemSave[wVal]='1';
+      itemSave[val]='1';
     }
   }
   rcList += '</form>';
@@ -2372,7 +2155,7 @@ function tFilterOpCreate(){
   // ------------------------------------------------------------
   rcList += '<div class="tfBtnArea">';
   rcList += '<input type="button" value="OK" onclick="tFilterOpGo()">';
-  rcList += '<input type="button" value="Cancel" onclick="tFilterOpCancel()">';
+  rcList += '<input type="button" value="Cancel" onclick="tFilterCancel(&quot;OP&quot;)">';
   rcList += '</div>';
  
   // ------------------------------------------------------------
@@ -2382,53 +2165,16 @@ function tFilterOpCreate(){
  
 }
 
-function tFilterOpClick(){
- //==============================================================
- //  フィルタリストのチェックボックスクリック
- //    「すべて」のチェックボックスと整合性を合わせる
- //==============================================================
-  var wForm   = document.forms['tfForm_Op'];
-
-  var wCntOff = 0;
-  var wAll    = document.getElementById('tfData_ALL_Op');   // 「すべて」のチェックボックス
- 
-  // --- 各チェックボックスの状態を集計する ---------------------
-  for (let i = 0; i < wForm.elements.length; i++){
-    if(wForm.elements[i].type == 'checkbox'){
-      if (wForm.elements[i].checked == false){
-        wCntOff++;
-      }
-    }
-  }
- 
-  // --- 各チェックボックス集計で「すべて」を整備する -----------
-  if(wCntOff == 0){
-    wAll.checked = true;             // 「すべて」をチェックする
-    tFilterOpAllSet();           // 各フィルタのチェックする
-  }else{
-     wAll.checked = false;           // 「すべて」をチェックを外す
-  }
-}
-
-function tFilterOpCancel(){
- //==============================================================
- //  キャンセルボタン押下
- //==============================================================
- 
-  tFilterOpSave('load');    // フィルタ条件の復元
-  tFilterCloseOpen('');           // フィルタリストを閉じる
-}
-
 function tFilterOpGo(){
  //===============================================================
  //  フィルタの実行
  //===============================================================
-  var wTABLE  = document.getElementById(gTabldID);
-  var tr     = wTABLE.rows;
+  var table  = document.getElementById(gTabldID);
+  var tr     = table.rows;
 
   resetRowspan();
   // --- 表を非表示----------------------------------------------
-  wTABLE.style.display = 'none';
+  table.style.display = 'none';
 
   // ------------------------------------------------------------
   //  全ての非表示を一旦クリア
@@ -2442,22 +2188,22 @@ function tFilterOpGo(){
   // ------------------------------------------------------------
   //  フィルタボタンのある列を繰り返す
   // ------------------------------------------------------------
-    var wAll       = document.getElementById('tfData_ALL_Op');     // 「すべて」のチェックボックス
-    var wItemSave  = {};
-    var wFilterBtn =  document.getElementById('tsBtn_Op');
-    var wItemList  = [];
-    var wVal       = gCateLits;
+    var all       = document.getElementById('tfData_ALL_Op');     // 「すべて」のチェックボックス
+    var itemSave  = {};
+    var filterBtn =  document.getElementById('tsBtn_Op');
+    var itemList  = [];
+    var val        = gCateLits;
     var x=0;
  
-    var wForm      = document.forms['tfForm_Op'];
+    var form      = document.forms['tfForm_Op'];
     // -----------------------------------------------------------
     //  チェックボックスの整備（「すべて」の整合性）
     // -----------------------------------------------------------
 
-    for (let i = 0; i < wForm.elements.length; i++){
-      if(wForm.elements[i].type == 'checkbox'){
-        if (wForm.elements[i].checked) {
-          wItemSave[wForm.elements[i].value] = 1;      // チェックされている値を保存
+    for (let i = 0; i < form.elements.length; i++){
+      if(form.elements[i].type == 'checkbox'){
+        if (form.elements[i].checked) {
+          itemSave[form.elements[i].value] = 1;      // チェックされている値を保存
         }
       }
     }
@@ -2466,14 +2212,14 @@ function tFilterOpGo(){
     //  フィルタ（非表示）の設定
     // -----------------------------------------------------------
 
-  if(!(wAll.checked)){
+  if(!(all.checked)){
     for (let i = 1; i < tr.length; i++){
       var wCatNo = 0;
-      for(let j = 1; j < wVal.length; j++){
+      for(let j = 1; j < val.length; j++){
         if((tr[i].getAttribute(gTagList[j]) !== null))
           wCatNo = j;
       }
-      if((wVal[wCatNo] in wItemSave) == false){
+      if((val[wCatNo] in itemSave) == false){
         tr[i].setAttribute('opFilterNone','');
       }
     }
@@ -2481,134 +2227,66 @@ function tFilterOpGo(){
 
  
   // --- 表を再表示----------------------------------------------
-  wTABLE.style.display = '';
-
+  table.style.display = '';
   tFilterCloseOpen('');
   setRowspan();
 }
 
-function tFilterOpSave(argFunc){
- //==============================================================
- //  フィルタリストの保存または復元
- //==============================================================
- 
-  // ---「すべて」のチェックボックス値を保存 ------------------
-  var wAllCheck = document.getElementById('tfData_ALL_Op');
-  if(argFunc == 'save'){
-    gTfListSave[wAllCheck.id] = wAllCheck.checked;
-  }else{
-    wAllCheck.checked = gTfListSave[wAllCheck.id];
-  }
- 
-  // --- 各チェックボックス値を保存 ---------------------------
-  var wForm    = document.forms['tfForm_Op'];
-  for (let i = 0; i < wForm.elements.length; i++){
-    if(wForm.elements[i].type == 'checkbox'){
-      if(argFunc == 'save'){
-        gTfListSave[wForm.elements[i].id] = wForm.elements[i].checked;
-      }else{
-        wForm.elements[i].checked = gTfListSave[wForm.elements[i].id];
-      }
-    }
-  }
- 
-}
-
-function tFilterOpCloseOpen(){
- //==============================================================
- //  フィルタを閉じて開く
- //==============================================================
- 
-  // --- フィルタリストを一旦すべて閉じる -----------------------
-  for(let i=0; i < gTfColList.length; i++){
-    document.getElementById("tfList_"+gTfColList[i]).style.display = 'none';
-  }
-  document.getElementById("tfList_TH").style.display = 'none'; //後付け
-
-  // --- フィルタリストを開く ---------------------
-  document.getElementById("tfList_Op").style.display = '';
-
-  // --- フィルタ条件の保存（キャンセル時に復元するため） -----
-  tFilterOpSave('save');
-}
-
-function tFilterOpAllSet(){
- //==============================================================
- //  「すべて」のチェック状態に合わせて、各チェックをON/OFF
- //==============================================================
-  var wChecked = false;
-  var wForm    = document.forms['tfForm_Op'];
- 
-  if(document.getElementById('tfData_ALL_Op').checked){
-    wChecked = true;
-  }
- 
-  for (let i = 0; i < wForm.elements.length; i++){
-    if(wForm.elements[i].type == 'checkbox'){
-      wForm.elements[i].checked = wChecked;
-    }
-  }
-}
-
-
+//==============================================================
+//初期に隠す項目を選択
+//==============================================================
 function tFilterHiden(){
- //==============================================================
- //  初期に隠す項目を選択
- //==============================================================
-  // --- 表示項目の選択------------------------------------------
-  var wForm   = document.forms['tfForm_TH'];
-  // --- 隠す項目を選択------------------------------------------
-  for (let i = 0; i < wForm.elements.length; i++){
-    if(wForm.elements[i].type == 'checkbox'){
-      if( wForm.elements[i].value == '★'
-       || wForm.elements[i].value == '職業'
-       || wForm.elements[i].value == '職分'
-       || wForm.elements[i].value == 'タグ'){
-        wForm.elements[i].checked =false;
+  //表示項目の選択
+  var form   = document.forms['tfForm_TH'];
+  //隠す項目を選択
+  for (let i = 0; i < form.elements.length; i++){
+    if(form.elements[i].type == 'checkbox'){
+      if( form.elements[i].value == '★'
+       || form.elements[i].value == '職業'
+       || form.elements[i].value == '職分'
+       || form.elements[i].value == 'タグ'){
+        form.elements[i].checked =false;
       }
     }
   }
-  // --- フィルタの実行 -----------------------------------------
-  tFilterTHClick();
+  //フィルタの反映と実行
+  tFilterClick('TH');
   tFilterTHGo();
 
-  // --- オペレーターの選択 -------------------------------------
-  var wForm   = document.forms['tfForm_Op'];
-  // --- 隠す項目を選択 -----------------------------------------
-  for (let i = 0; i < wForm.elements.length; i++){
-    if(wForm.elements[i].type == 'checkbox'){
-      // --- スキルありでなければ非表示 -------------------------
-      if(wForm.elements[i].value !== gCateLits[0]){
-        wForm.elements[i].checked = false;
+  //オペレーターの選択
+  var form   = document.forms['tfForm_Op'];
+  //隠す項目を選択
+  for (let i = 0; i < form.elements.length; i++){
+    if(form.elements[i].type == 'checkbox'){
+      //スキルありでなければ非表示
+      if(form.elements[i].value !== gCateLits[0]){
+        form.elements[i].checked = false;
       }
     }
   }
-  // --- フィルタの実行 -----------------------------------------
-  tFilterOpClick();
+  //フィルタの反映と実行
+  tFilterClick('Op');
   tFilterOpGo();
 }
 
+//==============================================================
+//  表を結合する
+//==============================================================
 function setRowspan(){
- //==============================================================
- //  同一オペレーターを結合する
- //==============================================================
-  var wTABLE    = document.getElementById(gTabldID);
-  var tr       = wTABLE.rows;
-  var wText     = "";
+  var table     = document.getElementById(gTabldID);
+  var tr        = table.rows;
   var nRowspan  = 1;
 
-  // --- 表を非表示----------------------------------------------
-  wTABLE.style.display = 'none';
+  //表を非表示
+  table.style.display = 'none';
 
+  //オペレーター名で結合
   for(let i = 0; i < tr.length-1; i++){
     if((tr[i].getAttribute('cmanFilterNone') == null) &&
        (tr[i].getAttribute('opFilterNone') == null)){
 
-  // ------------------------------------------------------------
-  //  先頭列の値を取得する
-  // ------------------------------------------------------------
       nRowspan = 1;
-      
+      //先頭セルが次に表示されるセルと一致すれば結合
       for(var j = 1; i + j < tr.length; j++){
         if((tr[i + j].getAttribute('cmanFilterNone') == null) &&
            (tr[i + j].getAttribute('opFilterNone') == null)){
@@ -2623,6 +2301,7 @@ function setRowspan(){
         }
       }
 
+      //結合した下のセルを非表示にする
       if(nRowspan > 1){
         for(let k=0; k <= 3; k++){
           tr[i].cells[k].setAttribute('rowspan', nRowspan);
@@ -2632,9 +2311,7 @@ function setRowspan(){
     }
   }
 
-  // ------------------------------------------------------------
-  //  スキル名の値を取得する
-  // ------------------------------------------------------------
+  //スキル名で結合
   for(let i = 0; i < tr.length-1; i++){
     if((tr[i].getAttribute('cmanFilterNone') == null) &&
        (tr[i].getAttribute('opFilterNone') == null)){
@@ -2664,51 +2341,35 @@ function setRowspan(){
     }
   }
 
-  // --- 表を再表示----------------------------------------------
-  wTABLE.style.display = '';
+  //表を再表示
+  table.style.display = '';
 }
 
+//==============================================================
+//  表の結合を解除する
+//==============================================================
 function resetRowspan(){
- //==============================================================
- //  同一オペレーターの結合を解除する
- //==============================================================
-  var wTABLE    = document.getElementById(gTabldID);
-  var tr       = wTABLE.rows;
-  var wText     = "";
+  var table     = document.getElementById(gTabldID);
+  var tr        = table.rows;
   var nRowspan  = 1;
 
-  // --- 表を非表示----------------------------------------------
-  wTABLE.style.display = 'none';
+  //表を非表示
+  table.style.display = 'none';
 
   for(let i = 0; i < tr.length; i++){
-  // ------------------------------------------------------------
-  //  先頭列の値を取得する
-  // ------------------------------------------------------------
-    if(tr[i].cells[0].getAttribute('hiddenRow') !== null){
-        for(j=0; j<=3; j++){
-          tr[i].cells[j].removeAttribute('hiddenRow');
-        }
-    }else if(tr[i].cells[0].getAttribute('rowspan') !== null){
-        for(j=0; j<=3; j++){
-          tr[i].cells[j].removeAttribute('rowspan');
-        }
-    }
-  // ------------------------------------------------------------
-  //  スキル名の値を取得する
-  // ------------------------------------------------------------
-    if(tr[i].cells[gNskillname].getAttribute('hiddenRow') !== null){
-      for(var k=gNskillname; k<tr[0].cells.length; k++){
-        tr[i].cells[k].removeAttribute('hiddenRow');
-      }
-    }else if(tr[i].cells[gNskillname].getAttribute('rowspan') !== null){
-      for(var k=gNskillname; k<tr[0].cells.length; k++){
-        tr[i].cells[k].removeAttribute('rowspan');
+    for(let j = 0; j < tr[i].cells.length; j++){
+      if(tr[i].cells[j].getAttribute('hiddenRow') !== null){
+        tr[i].cells[j].removeAttribute('hiddenRow');
+      }else if(tr[i].cells[j].getAttribute('rowspan') !== null){
+        tr[i].cells[j].removeAttribute('rowspan');
       }
     }
   }
-  // --- 表を再表示----------------------------------------------
-  wTABLE.style.display = '';
+
+  //表を再表示
+  table.style.display = '';
 }
+
     </script>
   </body>
 </html>
