@@ -41,8 +41,8 @@ td {
   margin     : 1px;
 }
 .tfArea{
-  display    : block;
   position   : relative;
+  top        : 4px;
 }
 .tfImg{
   display    : inline-block;
@@ -85,6 +85,10 @@ td {
   text-align : left;
   padding    : 2px;
 }
+.tfMeisai input{
+  position   : relative;
+  top        : 2px;
+}
 /* === フィルタリスト内の文字位置合わせ ========== */
 .tfMeisai label{
   padding    : 0 10px 0 3px;
@@ -117,15 +121,18 @@ td {
 tr[cmanFilterNone]{
   display    : none;
 }
+/* === 「カテゴリの選択」非表示用タグ ============ */
 tr[opFilterNone]{
   display    : none;
 }
+/* === 「表示項目の選択」非表示用タグ ============ */
 th[thFilterNone]{
   display    : none;
 }
 td[thFilterNone]{
   display    : none;
 }
+/* === セル結合の非表示用タグ ==================== */
 td[hiddenRow]{
   display    : none;
 }
@@ -138,15 +145,16 @@ td[hiddenRow]{
 <!-- <th>,<td>に「cmanFilterBtn」を定義するとフィルタボタンが付きます -->
 <!--  -->
 <table id="skillTable">  <!--- テーブルのIDをJavaScriptに定義します --->
-<tr><th cmanFilterBtn>オペレーター</th><th cmanFilterBtn>★</th><th cmanFilterBtn>職業</th><th name="duty" cmanFilterBtn>職分</th><th name="skillNo" cmanFilterBtn>スキル#</th><th cmanFilterBtn>スキル名</th><th cmanFilterBtn>SPタイプ</th><th cmanFilterBtn>発動タイプ</th><th cmanFilterBtn>初期SP</th><th cmanFilterBtn>必用SP</th><th cmanFilterBtn>持続</th><th name="effect" cmanFilterBtn>効果</th><th cmanFilterBtn>タグ</th></tr>
+<tr><th cmanFilterBtn>オペレーター</th><th cmanFilterBtn>★</th><th cmanFilterBtn>職業</th><th name="duty" cmanFilterBtn>職分</th><th name="skillNo" cmanFilterBtn>1/2/3</th><th cmanFilterBtn>スキル名</th><th cmanFilterBtn>SPタイプ</th><th cmanFilterBtn>発動タイプ</th><th cmanFilterBtn>初期SP</th><th cmanFilterBtn>必用SP</th><th cmanFilterBtn>持続</th><th name="effect" cmanFilterBtn>効果</th><th cmanFilterBtn>タグ</th></tr>
 <tr><td>イネス</td><td>6</td><td>先鋒</td><td>偵察兵</td><td>スキル1</td><td>影纏う刃</td><td>攻撃回復</td><td>自動発動</td><td>3</td><td>3</td><td>-</td><td>次の通常攻撃時、所持コスト+2、攻撃対象に3秒間、1秒ごとにイネスの攻撃力の80%の術ダメージを与える（重複不可）</td><td></td></tr>
 <tr><td>イネス</td><td>6</td><td>先鋒</td><td>偵察兵</td><td>スキル2</td><td>光亡き闇</td><td>自動回復</td><td>手動発動</td><td>15</td><td>20</td><td>12</td><td>攻撃範囲拡大、攻撃力+110%、自身がステルス状態になる。攻撃するたびに所持コスト+1、さらに対象の攻撃速度を7奪取
 （最大70まで奪取可能。スキル終了、またはイネスが退場まで効果継続）</td><td></td></tr>
 <tr><td>イネス</td><td>6</td><td>先鋒</td><td>偵察兵</td><td>スキル3</td><td>孤影の帰路</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>16</td><td>初回配置時は所持コストを消費せず、配置マスに「影哨」を1体配置した後戦場から離脱し、再配置時間がリセットされる
 配置時、攻撃力+160%、「影哨」を直線状に回収し、それが貫通した敵の内最大6体に攻撃力の200%の物理ダメージを与える。スキル発動中、敵にダメージを与えるたびに所持コスト+1</td><td></td></tr>
-<tr><td>ヴィジェル</td><td>6</td><td>先鋒</td><td>戦術家</td><td>スキル1</td><td>統率者の一声</td><td>自動回復</td><td>自動発動</td><td>5</td><td>21</td><td>-</td><td>所持コスト+7、「狼の隻影」1体増加</td><td></td></tr>
+<tr><td>ヴィジェル</td><td>6</td><td>先鋒</td><td>戦術家</td><td>スキル1</td><td>統率者の一声</td><td>自動回復</td><td>自動発動</td><td>5</td><td>21</td><td>-</td><td>所持コスト+7
+「狼の隻影」1体増加</td><td></td></tr>
 <tr><td>ヴィジェル</td><td>6</td><td>先鋒</td><td>戦術家</td><td>スキル2</td><td>統率者の恩賞</td><td>自動回復</td><td>自動発動</td><td>4</td><td>5</td><td>-</td><td>所持コスト+2
-「狼の群れ」の次の通常攻撃時、攻撃力が200%まで上昇し、「狼の群れ」のHPが最大値の20%回復する。敵を倒すと所持コストがさらに+1</td><td></td></tr>
+「狼の群れ」の次の攻撃時、攻撃力が200%まで上昇し、HPが最大値の20%回復する。敵を倒すと所持コストがさらに+1</td><td></td></tr>
 <tr><td>ヴィジェル</td><td>6</td><td>先鋒</td><td>戦術家</td><td>スキル3</td><td>統率者の威厳</td><td>自動回復</td><td>手動発動</td><td>10</td><td>35</td><td>15</td><td>スキル発動中所持コストが徐々に増加（合計12）し、通常攻撃が3連撃になる
 ヴィジェルと「狼の群れ」が群れにブロックされている敵にダメージを与えた時、追加でヴィジェルの攻撃力の50%の術ダメージを与える</td><td></td></tr>
 <tr><td>サイラッハ</td><td>6</td><td>先鋒</td><td>旗手</td><td>スキル1</td><td>支援指令γ</td><td>自動回復</td><td>手動発動</td><td>15</td><td>26</td><td>8</td><td>攻撃しなくなり、スキル発動中所持コストが徐々に増加(合計18)</td><td></td></tr>
@@ -334,7 +342,7 @@ HPが80%以上の時攻撃力+50%になる勇猛、防御力+35%、ブロック�
 <tr><td>ペナンス</td><td>6</td><td>重装</td><td>破壊者</td><td>スキル3</td><td>茨道を拓く</td><td>被撃回復</td><td>手動発動</td><td>0</td><td>20</td><td>30</td><td>最大HPの130%までの被ダメージを吸収可能なバリアを獲得する。通常攻撃の間隔を延長(+0.9)し、攻撃力+400%、敵に攻撃されやすくなる</td><td></td></tr>
 <tr><td>ホシグマ</td><td>6</td><td>重装</td><td>重盾衛士</td><td>スキル1</td><td>戦意昂揚</td><td>自動回復</td><td>手動発動</td><td>20</td><td>40</td><td>30</td><td>防御力+80%、攻撃力+40%</td><td></td></tr>
 <tr><td>ホシグマ</td><td>6</td><td>重装</td><td>重盾衛士</td><td>スキル2</td><td>荊棘</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>防御力+30%
-攻撃される度自身の攻撃力の100%の物理ダメージで敵に反撃する</td><td></td></tr>
+攻撃される度自身の攻撃力の100%の物理ダメージで敵に反撃する</td><td>永続（パッシブ）</td></tr>
 <tr><td>ホシグマ</td><td>6</td><td>重装</td><td>重盾衛士</td><td>スキル3</td><td>般若</td><td>自動回復</td><td>手動発動</td><td>30</td><td>50</td><td>25</td><td>攻撃力+140%、防御力+90%、
 盾を回転し、前方1マスにいる敵全員を同時に攻撃</td><td></td></tr>
 <tr><td>ホルン</td><td>6</td><td>重装</td><td>堅城砲手</td><td>スキル1</td><td>照明榴弾</td><td>自動回復</td><td>自動発動</td><td>0</td><td>5</td><td>-</td><td>次の通常攻撃時、攻撃力の280%の物理ダメージを与え、遠距離攻撃の場合ダメージ発生範囲拡大、着弾マスの周囲一定範囲に敵のステルス状態を無効にする照明エリアを8秒間生成する
@@ -352,7 +360,7 @@ HPが80%以上の時攻撃力+50%になる勇猛、防御力+35%、ブロック�
 <tr><td>マドロック</td><td>6</td><td>重装</td><td>破壊者</td><td>スキル2</td><td>岩崩し</td><td>被撃回復</td><td>自動発動</td><td>0</td><td>4</td><td>-</td><td>次の通常攻撃時、自身のHPが最大値の6%回復、周囲一定範囲内の地面にいる敵全員に攻撃力の270%の物理ダメージを与え、30%の確率で敵を1.2秒間スタンさせる</td><td></td></tr>
 <tr><td>マドロック</td><td>6</td><td>重装</td><td>破壊者</td><td>スキル3</td><td>悪土の血脈</td><td>自動回復</td><td>手動発動</td><td>15</td><td>25</td><td>30</td><td>スキル発動時から10秒間行動しなくなり、ダメージを受けない状態に入り、周囲一定範囲内の敵全員の移動速度-60%。
 その後、範囲内の地面にいる敵全員を5秒間スタンさせ、通常攻撃の間隔を短縮し、攻撃力+140%、防御力+80%、ブロック中の敵全員を同時に攻撃</td><td></td></tr>
-<tr><td>ユーネクテス</td><td>6</td><td>重装</td><td>決闘者</td><td>スキル1</td><td>トマホーク</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>攻撃力+25%、防御力+25%</td><td></td></tr>
+<tr><td>ユーネクテス</td><td>6</td><td>重装</td><td>決闘者</td><td>スキル1</td><td>トマホーク</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>攻撃力+25%、防御力+25%</td><td>永続（パッシブ）</td></tr>
 <tr><td>ユーネクテス</td><td>6</td><td>重装</td><td>決闘者</td><td>スキル2</td><td>烈震崩撃</td><td>自動回復</td><td>手動発動</td><td>15</td><td>28</td><td>18</td><td>攻撃間隔をわずかに延長し、攻撃力+180%。
 スキル発動中、自身がブロック中の敵全員をスタンさせる</td><td></td></tr>
 <tr><td>ユーネクテス</td><td>6</td><td>重装</td><td>決闘者</td><td>スキル3</td><td>鋼鉄の意思</td><td>自動回復</td><td>手動発動</td><td>25</td><td>45</td><td>35</td><td>攻撃力+230%、防御力+160%、ブロック数+2、1秒ごとにHPを最大値の6%回復
@@ -380,11 +388,11 @@ HPが80%以上の時攻撃力+50%になる勇猛、防御力+35%、ブロック�
 3回チャージ可能</td><td>チャージ</td></tr>
 <tr><td>アルケット</td><td>6</td><td>狙撃</td><td>速射手</td><td>スキル3</td><td>暴風の矢</td><td>攻撃回復</td><td>手動発動</td><td>15</td><td>30</td><td>20</td><td>攻撃力+30%、攻撃範囲+1、通常攻撃が3連撃になり、敵2体を同時に攻撃</td><td></td></tr>
 <tr><td>ウィシャデル</td><td>6</td><td>狙撃</td><td>投擲手</td><td>スキル1</td><td>クリアランス</td><td>攻撃回復</td><td>自動発動</td><td>0</td><td>2</td><td>-</td><td>次の通常攻撃は余震がさらに2回発生し、対象全員を1.5秒間スタンさせる。この攻撃はダメージ発生範囲がやや拡大し、余震のダメージが攻撃力の120%になる</td><td></td></tr>
-<tr><td>ウィシャデル</td><td>6</td><td>狙撃</td><td>投擲手</td><td>スキル2</td><td>オーバーレネゲード</td><td>自動回復</td><td>手動発動</td><td>15</td><td>25</td><td>25</td><td>攻撃力+35%、攻撃間隔を短縮(-0.7)、敵3体を同時に攻撃可能
+<tr><td>ウィシャデル</td><td>6</td><td>狙撃</td><td>投擲手</td><td>スキル2</td><td>オーバーレネゲード</td><td>自動回復</td><td>手動発動</td><td>15</td><td>25</td><td>25</td><td>攻撃力+35%、攻撃間隔を短縮、敵3体を同時に攻撃可能
 オーバードライブ：通常攻撃が攻撃力の80%の4連撃になり、攻撃範囲内の敵をランダムで攻撃する
 手動でスキルを停止可能</td><td>オーバードライブ</td></tr>
-<tr><td>ウィシャデル</td><td>6</td><td>狙撃</td><td>投擲手</td><td>スキル3</td><td>デイブレイクバースト</td><td>自動回復</td><td>手動発動</td><td>40</td><td>50</td><td>-</td><td>即座に攻撃範囲内にレヴァナントの影を2つ召喚(最大3つまで配置可能、スキル終了後も消滅しない)、攻撃力+180%、攻撃間隔が大幅に延長(+2.9)、攻撃時、攻撃力は220%に上昇し、ダメージ範囲が大幅に拡大、素質1の発動確率が100%に上昇。
-弾薬数は6発、手動でスキルを停止可能</td><td>弾薬</td></tr>
+<tr><td>ウィシャデル</td><td>6</td><td>狙撃</td><td>投擲手</td><td>スキル3</td><td>デイブレイクバースト</td><td>自動回復</td><td>手動発動</td><td>40</td><td>50</td><td>-</td><td>即座に攻撃範囲内に「レヴァナントの影」を2つ召喚し（最大3体まで、スキル終了後も消失しない)、攻撃力+180%、攻撃間隔が大幅に延長し、攻撃時の攻撃力が220%まで上昇する。ダメージ発生範囲が大幅に拡大し、第一素質の発動率が100%まで上昇する
+合計6発の弾薬を撃ち切るとスキルが終了（手動でスキルを停止可能）</td><td>弾薬</td></tr>
 <tr><td>エクシア</td><td>6</td><td>狙撃</td><td>速射手</td><td>スキル1</td><td>アサルトモード</td><td>攻撃回復</td><td>自動発動</td><td>0</td><td>4</td><td>-</td><td>次の通常攻撃時、3回連続で攻撃力の145%の物理ダメージを与える</td><td></td></tr>
 <tr><td>エクシア</td><td>6</td><td>狙撃</td><td>速射手</td><td>スキル2</td><td>バーストモード</td><td>自動回復</td><td>手動発動</td><td>25</td><td>35</td><td>15</td><td>通常攻撃が攻撃力の125%での4回連続攻撃になる</td><td></td></tr>
 <tr><td>エクシア</td><td>6</td><td>狙撃</td><td>速射手</td><td>スキル3</td><td>オーバーロード</td><td>自動回復</td><td>自動発動</td><td>20</td><td>30</td><td>15</td><td>通常攻撃が5回連続攻撃になり、攻撃間隔を短縮*3し、
@@ -481,11 +489,8 @@ HPが80%以上の時攻撃力+50%になる勇猛、防御力+35%、ブロック�
 <tr><td>シー</td><td>6</td><td>術師</td><td>拡散術師</td><td>スキル2</td><td>潑墨淋漓</td><td>自動回復</td><td>手動発動</td><td>25</td><td>38</td><td>20</td><td>攻撃範囲拡大、攻撃力+55%、攻撃速度+55、攻撃範囲内にいる敵全員を同時に攻撃。さらにHPが最大値の半分以下の敵に与える術ダメージが130%まで上昇</td><td></td></tr>
 <tr><td>シー</td><td>6</td><td>術師</td><td>拡散術師</td><td>スキル3</td><td>写意攻苦</td><td>自動回復</td><td>手動発動</td><td>70</td><td>100</td><td>60</td><td>通常攻撃の間隔を延長(+40%)し、ブロックされていない敵を優先して攻撃する。
 攻撃範囲とダメージ発生範囲拡大(半径1.7マス)、攻撃力+120%、攻撃する度に攻撃対象のいるマス（配置可能な地面マス）に「小自在」（召喚から25秒後強制退場）を召喚/再召喚する</td><td></td></tr>
-<tr><td>ニンフ</td><td>6</td><td>術師</td><td>本源術師</td><td>スキル1</td><td>心の笞刑</td><td>自動回復</td><td>手動発動</td><td>20</td><td>30</td><td>20</td><td>攻撃力+110%、攻撃対象に追加で術ダメージの15%の壊死損傷を与える
-対象が壊死損傷の爆発効果中の場合、追加で50%の元素ダメージを与える。</td><td></td></tr>
-<tr><td>ニンフ</td><td>6</td><td>術師</td><td>本源術師</td><td>スキル2</td><td>心の戦慄</td><td>自動回復</td><td>手動発動</td><td>9</td><td>12</td><td>-</td><td>敵に400%の術ダメージを与え、5秒間恐怖状態にする
-対象の周囲にいる敵全員に同等の術範囲ダメージを与えると同時に、与えた術ダメージの25%の壊死損傷を与える
-攻撃を受けた敵が壊死損傷の爆発効果中の場合、素質1の与ダメージが100%まで上昇
+<tr><td>ニンフ</td><td>6</td><td>術師</td><td>本源術師</td><td>スキル1</td><td>心の笞刑</td><td>自動回復</td><td>手動発動</td><td>20</td><td>30</td><td>20</td><td>攻撃力+110%、攻撃対象に追加で術ダメージの15%の壊死損傷を与える。対象が壊死損傷の爆発効果中の場合、追加で攻撃力の50%の元素ダメージを与える。</td><td></td></tr>
+<tr><td>ニンフ</td><td>6</td><td>術師</td><td>本源術師</td><td>スキル2</td><td>心の戦慄</td><td>自動回復</td><td>手動発動</td><td>9</td><td>12</td><td>-</td><td>敵に攻撃力の400%の術ダメージを与え、5秒間恐怖状態にし、対象の周囲にいる敵全員に同等の術範囲ダメージを与えると同時に、与えた術ダメージの25%の壊死損傷を与える。攻撃を受けた敵が壊死損傷の爆発効果中の場合、第一素質の与ダメージが攻撃力の100%まで上昇
 2回チャージ可能</td><td>チャージ</td></tr>
 <tr><td>ニンフ</td><td>6</td><td>術師</td><td>本源術師</td><td>スキル3</td><td>心の決壊</td><td>自動回復</td><td>手動発動</td><td>36</td><td>55</td><td>35</td><td>攻撃範囲が拡大、攻撃力+220%、攻撃速度+60
 同時に敵2体を攻撃し、攻撃対象が壊死損傷の爆発効果中の場合、通常攻撃が元素ダメージを与える</td><td></td></tr>
@@ -812,7 +817,7 @@ HPが80%以上の時攻撃力+50%になる勇猛、防御力+35%、ブロック�
 <tr><td>モーガン</td><td>5</td><td>前衛</td><td>勇士</td><td>スキル2</td><td>大胆不敵</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>18</td><td>配置後、HPが最大値の70%減少し、同時に最大HPの150%までの被ダメージが吸収可能なバリアを獲得する。（バリアは6秒持続し、その間消耗し続ける）。
 通常攻撃時、敵に攻撃力の190%の物理ダメージを与える</td><td>自傷</td></tr>
 <tr><td>ライオス</td><td>5</td><td>前衛</td><td>勇士</td><td>スキル1</td><td>臆病なケン助</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>15</td><td>HPが最大値の50%以上の場合、攻撃力+70%の勇猛状態を獲得する
-ただし、敵【ボス】が戦場に初めて出現した時、ライオスは15秒間攻撃できなくなる</td><td></td></tr>
+ただし、敵【ボス】が戦場に初めて出現した時、ライオスは15秒間攻撃できなくなる</td><td>永続（パッシブ）</td></tr>
 <tr><td>ライオス</td><td>5</td><td>前衛</td><td>勇士</td><td>スキル2</td><td>威嚇戦法</td><td>自動回復</td><td>手動発動</td><td>10</td><td>16</td><td>10</td><td>攻撃しなくなり、スキル期間中はブロックしている敵を戦慄状態にする。スキル終了時、即座にブロック中の敵に対して攻撃力の450%の物理ダメージを与える</td><td></td></tr>
 <tr><td>ラ・プルマ</td><td>5</td><td>前衛</td><td>鎌撃士</td><td>スキル1</td><td>ソニックスラッシュ</td><td>攻撃回復</td><td>自動発動</td><td>0</td><td>2</td><td>-</td><td>次の通常攻撃時、攻撃力が165%まで上昇し、攻撃対象に2回攻撃</td><td></td></tr>
 <tr><td>ラ・プルマ</td><td>5</td><td>前衛</td><td>鎌撃士</td><td>スキル2</td><td>リーピング</td><td>自動回復</td><td>手動発動</td><td>30</td><td>40</td><td>25</td><td>通常攻撃の間隔をかなり短縮(-50%)し、攻撃力+70%、
@@ -915,7 +920,7 @@ HPが80%以上の時攻撃力+50%になる勇猛、防御力+35%、ブロック�
 <tr><td>プラチナ</td><td>5</td><td>狙撃</td><td>速射手</td><td>スキル1</td><td>攻撃力強化γ</td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>30</td><td>攻撃力+100%</td><td></td></tr>
 <tr><td>プラチナ</td><td>5</td><td>狙撃</td><td>速射手</td><td>スキル2</td><td>ペガサスアイ</td><td>自動回復</td><td>自動発動</td><td>0</td><td>50</td><td>-</td><td>攻撃速度がわずかに低下、攻撃力+100%、攻撃範囲拡大
 退場まで効果継続</td><td>永続</td></tr>
-<tr><td>プロヴァンス</td><td>5</td><td>狙撃</td><td>精密射手</td><td>スキル1</td><td>ウルフアイ</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>攻撃対象のHPが20%減少する度その対象を攻撃時のみ攻撃力+25%</td><td></td></tr>
+<tr><td>プロヴァンス</td><td>5</td><td>狙撃</td><td>精密射手</td><td>スキル1</td><td>ウルフアイ</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>攻撃対象のHPが20%減少する度その対象を攻撃時のみ攻撃力+25%</td><td>永続（パッシブ）</td></tr>
 <tr><td>プロヴァンス</td><td>5</td><td>狙撃</td><td>精密射手</td><td>スキル2</td><td>鮮血の匂い</td><td>自動回復</td><td>手動発動</td><td>0</td><td>30</td><td>35</td><td>攻撃力+220%、ただしHPが80%以上の敵を攻撃しなくなる</td><td></td></tr>
 <tr><td>メテオリーテ</td><td>5</td><td>狙撃</td><td>榴弾射手</td><td>スキル1</td><td>散弾装填</td><td>攻撃回復</td><td>自動発動</td><td>0</td><td>3</td><td>-</td><td>次の通常攻撃時、ダメージ発生範囲が拡大、攻撃力の215%の物理ダメージを与える</td><td></td></tr>
 <tr><td>メテオリーテ</td><td>5</td><td>狙撃</td><td>榴弾射手</td><td>スキル2</td><td>榴弾装填</td><td>自動回復</td><td>手動発動</td><td>0</td><td>20</td><td>-</td><td>榴弾を発射し、ダメージ発生範囲内の敵全員に攻撃力300%の物理ダメージを与え、10秒間防御力-330</td><td></td></tr>
@@ -1054,8 +1059,8 @@ HPが80%以上の時攻撃力+50%になる勇猛、防御力+35%、ブロック�
 3回チャージ可能</td><td>チャージ</td></tr>
 <tr><td>ウインドフリット</td><td>5</td><td>補助</td><td>工匠</td><td>スキル2</td><td>この身を源とす</td><td>自動回復</td><td>手動発動</td><td>35</td><td>50</td><td>15</td><td>通常攻撃の間隔を延長(+0.5)し、攻撃力+160%、素質の攻撃力上昇効果が2倍まで上昇、スキルの効果時間終了後高信頼性バッテリーを1個獲得</td><td></td></tr>
 <tr><td>キャサリン</td><td>5</td><td>補助</td><td>工匠</td><td>スキル1</td><td>歳月による鍛造</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>攻撃力+15%、防御力+15%
-自身の支援装置によるバリアを有する他のオペレーターも同じ効果を獲得</td><td></td></tr>
-<tr><td>キャサリン</td><td>5</td><td>補助</td><td>工匠</td><td>スキル2</td><td>戦火の焼き入れ</td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>30</td><td>攻撃しなくなり、最大HP+70%、防御力+30%、支援装置の効果が「対象が1秒ごとにキャサリンの最大HPの6%に相当するバリアを獲得する」になる(素質によるバリア付与上限は超えない)</td><td></td></tr>
+自身の支援装置によるバリアを有する他のオペレーターも同じ効果を獲得</td><td>永続（パッシブ）</td></tr>
+<tr><td>キャサリン</td><td>5</td><td>補助</td><td>工匠</td><td>スキル2</td><td>戦火の焼き入れ</td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>30</td><td>攻撃しなくなり、最大HP+70%、防御力+30%、支援装置の効果が「対象が1秒ごとにキャサリンの最大HPの6%に相当するバリアを獲得する」になる（素質によるバリア付与上限は超えない）</td><td></td></tr>
 <tr><td>クエルクス</td><td>5</td><td>補助</td><td>祈祷師</td><td>スキル1</td><td>大地の慈悲</td><td>自動回復</td><td>手動発動</td><td>0</td><td>40</td><td>-</td><td>攻撃力+40%
 退場まで効果継続、手動でスキルを停止可能</td><td>永続</td></tr>
 <tr><td>クエルクス</td><td>5</td><td>補助</td><td>祈祷師</td><td>スキル2</td><td>生命の木霊</td><td>自動回復</td><td>手動発動</td><td>15</td><td>25</td><td>17</td><td>攻撃速度+60、味方を治療時、同時に治療対象のSPを1回復する</td><td></td></tr>
@@ -1093,7 +1098,7 @@ HPが80%以上の時攻撃力+50%になる勇猛、防御力+35%、ブロック�
 <tr><td>プロヴァイゾ</td><td>5</td><td>補助</td><td>緩速師</td><td>スキル2</td><td>論理展開</td><td>自動回復</td><td>手動発動</td><td>15</td><td>25</td><td>10</td><td>攻撃範囲内のすべての敵に攻撃力の350%の術ダメージを与え、10秒間足止めし、一部の特殊能力を無効化する。その後、自身の攻撃間隔が大幅に短縮(-1.1)</td><td></td></tr>
 <tr><td>ボビング</td><td>5</td><td>補助</td><td>祭儀師</td><td>スキル1</td><td>非友好的交渉</td><td>自動回復</td><td>自動発動</td><td>0</td><td>10</td><td>-</td><td>次の通常攻撃時、敵に攻撃力の200%の術ダメージを与え、さらに攻撃力の120%の灼熱損傷を与える。灼熱損傷の爆発効果中でない敵を優先して攻撃</td><td></td></tr>
 <tr><td>ボビング</td><td>5</td><td>補助</td><td>祭儀師</td><td>スキル2</td><td>「通行止め」</td><td>自動回復</td><td>手動発動</td><td>10</td><td>24</td><td>11</td><td>攻撃しなくなり、攻撃範囲内の敵1体のいる位置を参照して燃焼エリアを生成する。エリア内の地面にいる敵は1秒ごとに攻撃力の140%の術ダメージと攻撃力の20%の灼熱損傷を受ける</td><td></td></tr>
-<tr><td>メイヤー</td><td>5</td><td>補助</td><td>召喚師</td><td>スキル1</td><td>撹乱装置</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>機械川獺及び機械川獺の隣接4マス内の味方の物理回避、術回避+35%</td><td></td></tr>
+<tr><td>メイヤー</td><td>5</td><td>補助</td><td>召喚師</td><td>スキル1</td><td>撹乱装置</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>機械川獺及び機械川獺の隣接4マス内の味方の物理回避、術回避+35%</td><td>永続（パッシブ）</td></tr>
 <tr><td>メイヤー</td><td>5</td><td>補助</td><td>召喚師</td><td>スキル2</td><td>ミーボ起爆</td><td>自動回復</td><td>手動発動</td><td>0</td><td>30</td><td>-</td><td>配置中の機械川獺を全て起爆、機械川獺の周囲一定範囲内の敵全員にメイヤーの攻撃力の600%の術ダメージを与え、2秒間スタンさせる
 機械川獺は再配置可能</td><td></td></tr>
 <tr><td>ルシーラ</td><td>5</td><td>補助</td><td>呪詛師</td><td>スキル1</td><td>惑わす海流図</td><td>攻撃回復</td><td>自動発動</td><td>0</td><td>3</td><td>-</td><td>次の通常攻撃時、攻撃力が200%まで上昇し、同時に4体の敵を攻撃する</td><td></td></tr>
@@ -1104,7 +1109,7 @@ HPが80%以上の時攻撃力+50%になる勇猛、防御力+35%、ブロック�
 アクティブ：ウェルカムマットを1個獲得</td><td></td></tr>
 <tr><td>Frost</td><td>5</td><td>特殊</td><td>罠師</td><td>スキル2</td><td>リーサルパシュート</td><td>自動回復</td><td>自動発動</td><td>0</td><td>12</td><td>-</td><td>パッシブ：罠「ウェルカムマット」発動時、対象に攻撃力の200%の物理ダメージを与え、1.5秒間バインドさせる。対象が攻撃範囲内にいる場合、追加で攻撃力の180%の通常攻撃を3回与える
 アクティブ：ウェルカムマットを1個獲得</td><td></td></tr>
-<tr><td>Iana</td><td>5</td><td>特殊</td><td>傀儡師</td><td>スキル1</td><td>ミラージュマイン</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>&lt;身替り&gt;と入れ替わった際、ホログラムを攻撃した敵とその周囲一定範囲内の敵全員に攻撃力の400%の物理ダメージを与える</td><td></td></tr>
+<tr><td>Iana</td><td>5</td><td>特殊</td><td>傀儡師</td><td>スキル1</td><td>ミラージュマイン</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>&lt;身替り&gt;と入れ替わった際、ホログラムを攻撃した敵とその周囲一定範囲内の敵全員に攻撃力の400%の物理ダメージを与える</td><td>永続（パッシブ）</td></tr>
 <tr><td>Iana</td><td>5</td><td>特殊</td><td>傀儡師</td><td>スキル2</td><td>頭脳派の戦術</td><td>自動回復</td><td>手動発動</td><td>4</td><td>5</td><td>10</td><td>&lt;身替り&gt;と入れ替わり、周囲の敵のステルスを10秒間無効にする
 スキル発動中、自身の攻撃速度+300、かつステルス状態になる</td><td></td></tr>
 <tr><td>アーモンド</td><td>5</td><td>特殊</td><td>鉤縄師</td><td>スキル1</td><td>マグネットキャッチャー</td><td>自動回復</td><td>自動発動</td><td>4</td><td>4</td><td>-</td><td>次の通常攻撃時、敵を相当の力で引き寄せ、攻撃力の170%の物理ダメージを与える
@@ -1141,7 +1146,7 @@ HPが80%以上の時攻撃力+50%になる勇猛、防御力+35%、ブロック�
 2回チャージ可能</td><td>チャージ</td></tr>
 <tr><td>ベナ</td><td>5</td><td>特殊</td><td>傀儡師</td><td>スキル1</td><td>フルトリミング</td><td>自動回復</td><td>手動発動</td><td>25</td><td>35</td><td>20</td><td>最大HP-50%、攻撃力+100%、攻撃対象の防御力を35%無視する</td><td></td></tr>
 <tr><td>ベナ</td><td>5</td><td>特殊</td><td>傀儡師</td><td>スキル2</td><td>クイッククロップ</td><td>自動回復</td><td>手動発動</td><td>18</td><td>25</td><td>22</td><td>攻撃力+90%、攻撃速度+80、敵を攻撃する度自身のHPが4%減少</td><td>自傷</td></tr>
-<tr><td>マンティコア</td><td>5</td><td>特殊</td><td>潜伏者</td><td>スキル1</td><td>アジトキシン</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>攻撃した敵を5秒間移動速度-50%</td><td></td></tr>
+<tr><td>マンティコア</td><td>5</td><td>特殊</td><td>潜伏者</td><td>スキル1</td><td>アジトキシン</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>攻撃した敵を5秒間移動速度-50%</td><td>永続（パッシブ）</td></tr>
 <tr><td>マンティコア</td><td>5</td><td>特殊</td><td>潜伏者</td><td>スキル2</td><td>スコーピオンテール</td><td>自動回復</td><td>手動発動</td><td>10</td><td>20</td><td>40</td><td>通常攻撃の間隔を延長し、攻撃力+90%、攻撃した敵を1.0秒間スタンさせる</td><td></td></tr>
 <tr><td>レッド</td><td>5</td><td>特殊</td><td>執行者</td><td>スキル1</td><td>処刑の構え</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>10</td><td>配置後攻撃力+80%、物理回避と術回避+50%</td><td></td></tr>
 <tr><td>レッド</td><td>5</td><td>特殊</td><td>執行者</td><td>スキル2</td><td>群狼</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>配置後周囲一定範囲内の敵全員に攻撃力の250%の物理ダメージを与え、3秒間スタンさせる</td><td></td></tr>
@@ -1190,7 +1195,7 @@ HPが80%以上の時攻撃力+50%になる勇猛、防御力+35%、ブロック�
 (反撃の発動最短間隔が攻撃間隔の50%)</td><td></td></tr>
 <tr><td>ドーベルマン</td><td>4</td><td>前衛</td><td>教官</td><td>スキル1</td><td>強撃β</td><td>攻撃回復</td><td>自動発動</td><td>0</td><td>3</td><td>-</td><td>次の通常攻撃時、攻撃力が230%まで上昇</td><td></td></tr>
 <tr><td>ドーベルマン</td><td>4</td><td>前衛</td><td>教官</td><td>スキル2</td><td>鞭撻</td><td>自動回復</td><td>手動発動</td><td>40</td><td>70</td><td>25</td><td>攻撃力+80%、素質の効果が3倍まで上昇</td><td></td></tr>
-<tr><td>ビーハンター</td><td>4</td><td>前衛</td><td>闘士</td><td>スキル1</td><td>ウィービング</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>物理回避+60%</td><td></td></tr>
+<tr><td>ビーハンター</td><td>4</td><td>前衛</td><td>闘士</td><td>スキル1</td><td>ウィービング</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>物理回避+60%</td><td>永続（パッシブ）</td></tr>
 <tr><td>ビーハンター</td><td>4</td><td>前衛</td><td>闘士</td><td>スキル2</td><td>ラッシュ</td><td>自動回復</td><td>手動発動</td><td>0</td><td>20</td><td>10</td><td>通常攻撃の間隔を大幅に短縮(-60%)</td><td></td></tr>
 <tr><td>ヒューマス</td><td>4</td><td>前衛</td><td>鎌撃士</td><td>スキル1</td><td>廃棄物処理</td><td>攻撃回復</td><td>自動発動</td><td>0</td><td>3</td><td>-</td><td>次の通常攻撃時、攻撃力が250%まで上昇し、自身のHPを追加で80回復</td><td></td></tr>
 <tr><td>ヒューマス</td><td>4</td><td>前衛</td><td>鎌撃士</td><td>スキル2</td><td>高効率作業</td><td>自動回復</td><td>手動発動</td><td>30</td><td>45</td><td>25</td><td>スキル発動中、ブロック数+1。
@@ -1291,9 +1296,9 @@ HPが最大値の50%以上の場合、攻撃力+45%の勇猛状態を獲得し�
 <tr><td>ロベルタ</td><td>4</td><td>補助</td><td>工匠</td><td>スキル1</td><td>シラクーザ式化粧術</td><td>自動回復</td><td>手動発動</td><td>15</td><td>25</td><td>35</td><td>攻撃力+50%、防御力+50%</td><td></td></tr>
 <tr><td>ロベルタ</td><td>4</td><td>補助</td><td>工匠</td><td>スキル2</td><td>メイクアップマシン</td><td>自動回復</td><td>手動発動</td><td>10</td><td>30</td><td>25</td><td>攻撃しなくなり、ブロック数+1、防御力+80%
 スキルの効果時間終了時、「メイクアップマシン」を1個獲得</td><td></td></tr>
-<tr><td>イーサン</td><td>4</td><td>特殊</td><td>潜伏者</td><td>スキル1</td><td>ループザループ</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>通常攻撃時、追加で1秒ごとに100の術ダメージを与える、継続4秒</td><td></td></tr>
+<tr><td>イーサン</td><td>4</td><td>特殊</td><td>潜伏者</td><td>スキル1</td><td>ループザループ</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>通常攻撃時、追加で1秒ごとに100の術ダメージを与える、継続4秒</td><td>永続（パッシブ）</td></tr>
 <tr><td>イーサン</td><td>4</td><td>特殊</td><td>潜伏者</td><td>スキル2</td><td>グラインドツイスター</td><td>自動回復</td><td>手動発動</td><td>0</td><td>25</td><td>30</td><td>攻撃力+70%、素質の発動率が3.0倍まで上昇</td><td></td></tr>
-<tr><td>ヴァーダント</td><td>4</td><td>特殊</td><td>傀儡師</td><td>スキル1</td><td>蒼翠の鎧</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>最大HP+25%、術耐性+15</td><td></td></tr>
+<tr><td>ヴァーダント</td><td>4</td><td>特殊</td><td>傀儡師</td><td>スキル1</td><td>蒼翠の鎧</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>最大HP+25%、術耐性+15</td><td>永続（パッシブ）</td></tr>
 <tr><td>ヴァーダント</td><td>4</td><td>特殊</td><td>傀儡師</td><td>スキル2</td><td>藤の毒刃</td><td>自動回復</td><td>手動発動</td><td>16</td><td>25</td><td>25</td><td>通常攻撃が術攻撃になり、攻撃速度+80
 攻撃対象にダメージを与えるたびに自身のHPを4%失う</td><td></td></tr>
 <tr><td>グラベル</td><td>4</td><td>特殊</td><td>執行者</td><td>スキル1</td><td>スニークガード</td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td>配置後防御力+400%
@@ -1436,9 +1441,9 @@ var gTabldID    = 'skillTable';  //テーブルのエリアのIDを設定
 var gTfStartRow = 0;
 var gTfColList  = [];            //ボタンが配置されている列番号
 var gTfListSave = {};            //フィルタリストの保存状態
-var gButtonID   = 'property';    //propertyボタンのIDを設定
-var gOpButtonID = 'Op';          //オペレーターボタンのIDを設定
-var gNtag       = 12;            //タグの行番号
+var gButtonID   = 'TH';          //「表示項目の選択」ボタンのIDを設定
+var gOpButtonID = 'Op';          //「カテゴリの選択」ボタンのIDを設定
+var gNtag       = 12;            //タグの列番号　この列のみ改行で分割
 var gNskillname = 5;             //スキル名の行番号
  
 //==============================================================
@@ -1472,8 +1477,8 @@ function tFilterInit(){
   // テーブル内をフィルタボタンを付ける
   //------------------------------------------------------------
   for(let i = 0; i < table.rows.length; i++){
-     var td = table.rows[i].cells;
-     for(let j = 0; j < td.length; j++){
+    var td = table.rows[i].cells;
+    for(let j = 0; j < td.length; j++){
       //--------------------------------------------------------
       // 「cmanFilterBtn」の定義があるセルを対象とする
       //--------------------------------------------------------
@@ -1485,12 +1490,12 @@ function tFilterInit(){
         //------------------------------------------------------
         // ボタンを追加（画像はsvgを使用）
         //------------------------------------------------------
-        addBtn  = '<div class="tfArea">';
+        addBtn  = '<span class="tfArea">';
         addBtn += '<svg class="tfImg" id="tsBtn_' + j + '" onclick="tFilterCloseOpen(' + j + ')"><path d="M0 0 L8 0 L5 4 L5 8 L3 8 L3 4Z"></path></svg>';
-        addBtn += '<div class="tfList" id="tfList_' + j + '" style="display:none">';
+        addBtn += '<span class="tfList" id="tfList_' + j + '" style="display:none">';
         addBtn += tFilterCreate(j);
-        addBtn += '</div>';
-        addBtn += '</div>';
+        addBtn += '</span>';
+        addBtn += '</span>';
         td[j].innerHTML = td[j].innerHTML + addBtn;
         //------------------------------------------------------
         // フィルタボタンの列を保存
@@ -1518,17 +1523,14 @@ function tFilterUpdate(){
 //==============================================================
 // テーブル内フィルタの更新
 //==============================================================
-  var table     = document.getElementById(gTabldID);
-  var addBtn    = '';
-
   //------------------------------------------------------------
-  // テーブル内をフィルタボタンを付ける
+  // 全てのフィルタボタンに対して実行
   //------------------------------------------------------------
   for(let i = 0; i < gTfColList.length; i++){
-    //------------------------------------------------------------
-    // フィルタ実行中は更新しない
-    //------------------------------------------------------------
     var filterBtn = document.getElementById('tsBtn_' + String(i));
+    //------------------------------------------------------------
+    // フィルタ実行中は更新しない（色で判定）
+    //------------------------------------------------------------
     if(filterBtn.style.backgroundColor == ''){
       document.getElementById("tfList_"+gTfColList[i]).innerHTML = tFilterCreate(i);
     }
@@ -1539,7 +1541,6 @@ function tFilterCreate(argCol){
 //==============================================================
 // 指定列のフィルタリスト作成
 //==============================================================
-
   var table     = document.getElementById(gTabldID);
   var tr        = table.rows;
   var item      = [];              // クリックされた列の値
@@ -1554,30 +1555,30 @@ function tFilterCreate(argCol){
   for(let i = gTfStartRow; i < tr.length; i++){
     if((tr[i].getAttribute('cmanFilterNone') == null) &&
        (tr[i].getAttribute('opFilterNone') == null)){
-    if(argCol == gNtag){
-      //--------------------------------------------------------
-      // タグ列を改行またはスペースで分割する
-      //--------------------------------------------------------
-      var wTags = tr[i].cells[argCol].innerText.split(/\r\n|\n|\r|\s/);
-      for(let k = 0; k < wTags.length; k++){
-        item[n_item] = wTags[k];
-        if(!(item[n_item].match(/^[-]?[0-9,\.]*$/))){
+      if(argCol == gNtag){
+        //--------------------------------------------------------
+        // タグ列は改行またはスペースで分割する
+        //--------------------------------------------------------
+        var wTags = tr[i].cells[argCol].innerText.split(/\r\n|\n|\r|\s/);
+        
+        for(let k = 0; k < wTags.length; k++){
+          item[n_item] = wTags[k];
+          if(!(item[n_item].match(/^[-]?[0-9,\.]*$/))){
+            notNum = 1;
+          }
+          n_item++;
+        }
+      }else{ 
+        //--------------------------------------------------------
+        // タグ列以外はそのまま
+        //--------------------------------------------------------
+        item[n_item] = tr[i].cells[argCol].innerText;
+         if(!(item[n_item].match(/^[-]?[0-9,\.]*$/))){
           notNum = 1;
         }
         n_item++;
       }
-    }else{ 
-      //--------------------------------------------------------
-      // タグ列以外はそのまま
-      //--------------------------------------------------------
-      item[n_item] = tr[i].cells[argCol].innerText;
- 
-      if(!(item[n_item].match(/^[-]?[0-9,\.]*$/))){
-        notNum = 1;
-      }
-      n_item++;
     }
-  }
   }
  
   //------------------------------------------------------------
@@ -1651,8 +1652,8 @@ function tFilterClick(argCol){
 // クリック時「すべて」チェックボックスの整合性を合わせる
 //==============================================================
   var form      = document.forms['tfForm_' + argCol];
-  var wCntOff   = 0;
   var all       = document.getElementById('tfData_ALL_' + argCol);   // 「すべて」のチェックボックス
+  var wCntOn    = true;
  
   //------------------------------------------------------------
   // 各チェックボックスの状態を集計する
@@ -1660,7 +1661,7 @@ function tFilterClick(argCol){
   for (let i = 0; i < form.elements.length; i++){
     if(form.elements[i].type == 'checkbox'){
       if (form.elements[i].checked == false){
-        wCntOff = 1;
+        wCntOn = false;
         break;
       }
     }
@@ -1669,11 +1670,9 @@ function tFilterClick(argCol){
   //------------------------------------------------------------
   // 各チェックボックス集計で「すべて」を整備する
   //------------------------------------------------------------
-  if(wCntOff){
-    all.checked = false;            // 「すべて」をチェックを外す
-  }else{
-    all.checked = true;             // 「すべて」をチェックする
-    tFilterAllSet(argCol);          // 各フィルタのチェックする
+  all.checked = wCntOn;
+  if(wCntOn){
+    tFilterAllSet(argCol);  // 各フィルタをチェックする
   }
 }
 
@@ -1710,13 +1709,13 @@ function tFilterGo(){
   //------------------------------------------------------------
   // フィルタボタンのある列を繰り返す
   //------------------------------------------------------------
-  for(var wColList = 0; wColList < gTfColList.length; wColList++){
-    var wCol       = gTfColList[wColList];
-    var all       = document.getElementById('tfData_ALL_'+wCol);     // 「すべて」のチェックボックス
-    var itemSave  = {};
-    var filterBtn = document.getElementById('tsBtn_'+wCol);
-    var wFilterStr = document.getElementById('tfInStr_'+wCol);
-    var form      = document.forms['tfForm_'+wCol];
+  for(var wColList  = 0; wColList < gTfColList.length; wColList++){
+    var wCol        = gTfColList[wColList];
+    var all         = document.getElementById('tfData_ALL_'+wCol);     // 「すべて」のチェックボックス
+    var itemSave    = {};
+    var filterBtn   = document.getElementById('tsBtn_'+wCol);
+    var wFilterStr  = document.getElementById('tfInStr_'+wCol);
+    var form        = document.forms['tfForm_'+wCol];
 
     //----------------------------------------------------------
     // チェックされている値を保存
@@ -1744,7 +1743,7 @@ function tFilterGo(){
         //------------------------------------------------------
         // チェックボックス選択によるフィルタ
         //------------------------------------------------------
-        if(!all.checked){
+        if(all.checked == false){
           let checker = 0;
 
           //----------------------------------------------------
@@ -1795,6 +1794,9 @@ function tFilterGo(){
   //------------------------------------------------------------
   table.style.display = '';
   setRowspan();
+  //------------------------------------------------------------
+  // フィルタリストの更新
+  //------------------------------------------------------------
   tFilterUpdate();
 }
 
@@ -2049,6 +2051,9 @@ function tFilterTHInit(){
   addBtn += tFilterOpCreate();
   addBtn += '</span>';
   addBtn += '</span>';
+  addBtn += '<span class="btArea">';
+  addBtn += '<input type="button" value="リセット" onclick="tableReset()"/>'
+  addBtn += '</span>';
   wBtn.innerHTML = addBtn;
 
   //------------------------------------------------------------
@@ -2207,9 +2212,9 @@ function tFilterOpCreate(){
 //==============================================================
  
   var table    = document.getElementById(gTabldID);
-  var item     = gCateLits;              // クリックされた列の値
-  var itemSave = {};              // フィルタに設定した値がキー
-  var rcList    = '';              // 返すフィルタリスト
+  var item     = gCateLits;     // クリックされた列の値
+  var itemSave = {};            // フィルタに設定した値がキー
+  var rcList    = '';           // 返すフィルタリスト
  
   //------------------------------------------------------------
   // 「すべて」のチェックボックス作成
@@ -2243,7 +2248,7 @@ function tFilterOpCreate(){
       rcList += '</div>';
  
       //---重複判定用にチェックボックスの値を保存 --------------
-      itemSave[val]='1';
+      itemSave[val] = '1';
     }
   }
   rcList += '</form>';
@@ -2292,8 +2297,8 @@ function tFilterOpGo(){
     var itemSave  = {};
     var filterBtn =  document.getElementById('tsBtn_Op');
     var itemList  = [];
-    var val        = gCateLits;
-    var x=0;
+    var val       = gCateLits;
+    var x         = 0;
  
     var form      = document.forms['tfForm_Op'];
     //----------------------------------------------------------
@@ -2323,7 +2328,6 @@ function tFilterOpGo(){
       }
     }
   }
-
  
   //------------------------------------------------------------
   // フィルタを閉じる
@@ -2385,7 +2389,7 @@ function tFilterHiden(){
 
 function setRowspan(){
 //==============================================================
-// 表を結合する
+// セルを結合する
 //==============================================================
   var table     = document.getElementById(gTabldID);
   var tr        = table.rows;
@@ -2405,7 +2409,7 @@ function setRowspan(){
 
       nRowspan = 1;
       //--------------------------------------------------------
-      // 次に表示されるセルと一致すれば結合
+      // 下のセルと一致すれば下のセルを非表示
       //--------------------------------------------------------
       for(var j = 1; i + j < tr.length; j++){
         if((tr[i + j].getAttribute('cmanFilterNone') == null) &&
@@ -2422,13 +2426,16 @@ function setRowspan(){
       }
 
       //--------------------------------------------------------
-      // 結合した下のセルを非表示にする
+      // セルの高さを変更する
       //--------------------------------------------------------
       if(nRowspan > 1){
         for(let k=0; k <= 3; k++){
           tr[i].cells[k].setAttribute('rowspan', nRowspan);
         }
       }
+      //--------------------------------------------------------
+      // 処理したセルの次まで飛ぶ
+      //--------------------------------------------------------
       i += j - 1;
     }
   }
@@ -2442,7 +2449,7 @@ function setRowspan(){
 
       nRowspan = 1;
       //--------------------------------------------------------
-      // 次に表示されるセルと一致すれば結合
+      // 下のセルと一致すれば下のセルを非表示
       //--------------------------------------------------------
       for(var j = 1; i + j < tr.length; j++){
         if((tr[i + j].getAttribute('cmanFilterNone') == null) &&
@@ -2458,13 +2465,16 @@ function setRowspan(){
         }
       }
       //--------------------------------------------------------
-      // 結合した下のセルを非表示にする
+      // セルの高さを変更する
       //--------------------------------------------------------
       if(nRowspan > 1){
         for(let k = gNskillname; k < tr[0].cells.length; k++){
           tr[i].cells[k].setAttribute('rowspan', nRowspan);
         }
       }
+      //--------------------------------------------------------
+      // 処理したセルの次まで飛ぶ
+      //--------------------------------------------------------
       i += j - 1;
     }
   }
@@ -2477,11 +2487,10 @@ function setRowspan(){
 
 function resetRowspan(){
 //==============================================================
-// 表の結合を解除する
+// セルの結合を解除する
 //==============================================================
   var table     = document.getElementById(gTabldID);
   var tr        = table.rows;
-  var nRowspan  = 1;
 
   //------------------------------------------------------------
   // 表を非表示
@@ -2504,6 +2513,9 @@ function resetRowspan(){
   table.style.display = '';
 }
 
+function tableReset() {
+  window.location.reload();
+}
     </script>
   </body>
 </html>
