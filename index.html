@@ -976,7 +976,7 @@ var gTfColList  = [];            //ボタンが配置されている列番号
 var gTfListSave = {};            //フィルタリストの保存状態
 var gButtonID   = 'TH';          //「表示項目の選択」ボタンのIDを設定
 var gOpButtonID = 'Op';          //「カテゴリの選択」ボタンのIDを設定
-var gNtag       = 12;            //タグの列番号　この列のみ改行で分割
+var gNtag       = 12;            //タグの列番号 この列のみ改行で分割
 var gNskillname = 5;             //スキル名の行番号
  
 //==============================================================
@@ -1140,7 +1140,7 @@ function tFilterCreate(argCol){
  
   for(let i=0; i < item.length; i++){
      val = trim(item[i]);
-    if(!(val in itemSave)){　　　　// 重複チェック
+    if(!(val in itemSave)){    // 重複チェック
       //--------------------------------------------------------
       // チェックボックスの作成
       //--------------------------------------------------------
@@ -1168,7 +1168,7 @@ function tFilterCreate(argCol){
   // 「OK」「Cancel」「ソート」ボタンの作成
   //------------------------------------------------------------
   rcList += '<div class="tfBtnArea">';
-  rcList += '<input type="button" value="OK" onclick="tFilterGo()">';
+  rcList += '<input type="button" value="OK" onclick="tFilterGo(' + argCol + ')">';
   rcList += '<input type="button" value="Cancel" onclick="tFilterCancel(' + argCol + ')">';
   rcList += '<input type="button" value="↑" onclick="sortGo(' + argCol + ', &quot;asc&quot;)">';
   rcList += '<input type="button" value="↓" onclick="sortGo(' + argCol + ', &quot;desc&quot;)">';
@@ -1217,12 +1217,17 @@ function tFilterCancel(argCol){
   tFilterCloseOpen('');           // フィルタリストを閉じる
 }
 
-function tFilterGo(){
+function tFilterGo(argCol){
 //==============================================================
 // フィルタの実行
 //==============================================================
   var table     = document.getElementById(gTabldID);
   var tr        = table.rows;
+
+  //------------------------------------------------------------
+  // フィルタ状態の保存
+  //------------------------------------------------------------
+  tFilterSave(argCol, 'save');
 
   //------------------------------------------------------------
   // 表の結合解除と非表示
@@ -1384,11 +1389,20 @@ function tFilterCloseOpen(argCol){
   // フィルタリストを一旦すべて閉じる
   //------------------------------------------------------------
   for(let i = 0; i < gTfColList.length; i++){
-    document.getElementById("tfList_"+gTfColList[i]).style.display = 'none';
+    if(document.getElementById("tfList_"+gTfColList[i]).style.display != 'none'){
+      tFilterSave(gTfColList[i], 'load');
+      document.getElementById("tfList_"+gTfColList[i]).style.display = 'none';
+    }
   }
-  document.getElementById("tfList_TH").style.display = 'none';
-  document.getElementById("tfList_Op").style.display = 'none';
- 
+  if(document.getElementById("tfList_TH").style.display != 'none'){
+    tFilterSave("TH", 'load');
+    document.getElementById("tfList_TH").style.display = 'none';
+  }
+  if(document.getElementById("tfList_Op").style.display != 'none'){
+    tFilterSave("Op", 'load');
+    document.getElementById("tfList_Op").style.display = 'none';
+  }
+
   //------------------------------------------------------------
   // 指定された列のフィルタリストを開く
   //------------------------------------------------------------
@@ -1452,8 +1466,9 @@ function trim(argStr){
 // トリミング
 //==============================================================
   var rcStr = argStr;
-  rcStr	= rcStr.replace(/^[ 　\r\n]+/g, '');
-  rcStr	= rcStr.replace(/[ 　\r\n]+$/g, '');
+  rcStr	= rcStr.replace(/[\r\n]/g, '');
+  rcStr	= rcStr.replace(/^[\s]+/g, '');
+  rcStr	= rcStr.replace(/[\s]+$/g, '');
   return rcStr;
 }
 
@@ -1502,7 +1517,7 @@ function sortGo(argCol, argFunc){
   //------------------------------------------------------------
   // フィルタの実行
   //------------------------------------------------------------
-  tFilterGo();
+  tFilterGo(argCol);
 }
 
 function compareKeys(a, b) {
@@ -1673,6 +1688,11 @@ function tFilterTHGo(){
   var tr     = table.rows;
 
   //------------------------------------------------------------
+  // フィルタ状態の保存
+  //------------------------------------------------------------
+  tFilterSave("TH", 'save');
+
+  //------------------------------------------------------------
   // 表の結合解除と非表示
   //------------------------------------------------------------
   resetRowspan();
@@ -1809,6 +1829,11 @@ function tFilterOpGo(){
   var tr     = table.rows;
 
   //------------------------------------------------------------
+  // フィルタ状態の保存
+  //------------------------------------------------------------
+  tFilterSave("Op", 'save');
+
+  //------------------------------------------------------------
   // 表の結合解除と非表示
   //------------------------------------------------------------
   resetRowspan();
@@ -1866,12 +1891,16 @@ function tFilterOpGo(){
   // フィルタを閉じる
   //------------------------------------------------------------
   tFilterCloseOpen('');
+
   //------------------------------------------------------------
   // 表の再表示と結合
   //------------------------------------------------------------
   table.style.display = '';
   setRowspan();
-  tFilterUpdate;
+  //------------------------------------------------------------
+  // フィルタリストの更新
+  //------------------------------------------------------------
+  tFilterUpdate();
 }
 
 function tFilterHiden(){
@@ -1881,15 +1910,16 @@ function tFilterHiden(){
   //------------------------------------------------------------
   // 「表示項目の選択」の操作
   //------------------------------------------------------------
-  var form   = document.forms['tfForm_TH'];
+  var form     = document.forms['tfForm_TH'];
+  var elements = form.elements;
   // 隠す項目を選択
-  for (let i = 0; i < form.elements.length; i++){
-    if(form.elements[i].type == 'checkbox'){
-      if( form.elements[i].value == '★'
-       || form.elements[i].value == '職業'
-       || form.elements[i].value == '職分'
-       || form.elements[i].value == 'タグ'){
-        form.elements[i].checked =false;
+  for (let i = 0; i <  elements.length; i++){
+    if( elements[i].type == 'checkbox'){
+      if(  elements[i].value == '★'
+       ||  elements[i].value == '職業'
+       ||  elements[i].value == '職分'
+       ||  elements[i].value == 'タグ'){
+         elements[i].checked =false;
       }
     }
   }
@@ -1902,13 +1932,14 @@ function tFilterHiden(){
   //------------------------------------------------------------
   // 「カテゴリーの選択」の操作
   //------------------------------------------------------------
-  var form   = document.forms['tfForm_Op'];
+  form      = document.forms['tfForm_Op'];
+  elements  = form.elements;
   // 隠す項目を選択
-  for (let i = 0; i < form.elements.length; i++){
-    if(form.elements[i].type == 'checkbox'){
+  for (let i = 0; i <  elements.length; i++){
+    if( elements[i].type == 'checkbox'){
       // スキルありでなければ非表示
-      if(form.elements[i].value !== gCateLits[0]){
-        form.elements[i].checked = false;
+      if( elements[i].value !== gCateLits[0]){
+         elements[i].checked = false;
       }
     }
   }
