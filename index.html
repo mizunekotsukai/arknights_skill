@@ -1473,12 +1473,17 @@ function DefaultSave() {
   gDefaultHTML = document.body.innerHTML;
 }
 
-// HTML記述を初期状態に戻す
 function HTMLReset() {
+//==============================================================
+// ページを初期状態に戻す
+//==============================================================
+  gTfStartRow = 0;
+  gTfColList  = [];            //ボタンが配置されている列番号
+  gTfListSave = {};            //フィルタリストの保存状態
   document.body.innerHTML = gDefaultHTML;
   tFilterTHInit();  //列操作の初期関数
-  tFilterInit();    //行操作の初期関数
   tFilterHideInit();   //初期に表示しない列を設定
+  tFilterInit();    //行操作の初期関数
 }
 
 function tFilterInit(){
@@ -2567,4 +2572,5 @@ function tableReset() {
     </script>
   </body>
 </html>
+
 
