@@ -2217,16 +2217,11 @@ function tFilterTHGo(){
   }
 
   //------------------------------------------------------------
-  // 表の再表示（ないとなぜか判定できない）
-  //------------------------------------------------------------
-  table.style.display = '';
-
-  //------------------------------------------------------------
   // フィルタ（非表示）の設定
   //------------------------------------------------------------
   if(!(all.checked)){
     for(let i=0; i < tr[0].cells.length; i++){
-      let val = trim(tr[0].cells[i].innerText);
+      let val = trim(tr[0].cells[i].childNodes[0].data);
 
       if((val in itemSave) == false){
         for(let j = 0; j < tr.length; j++){
@@ -2568,6 +2563,7 @@ function tableReset() {
     </script>
   </body>
 </html>
+
 
 
 
