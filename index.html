@@ -34,12 +34,12 @@ td {
   padding    : 0 0.3em;
   text-align : center;
   border     : 1px solid lightgray;
-  max-width  : 50em;
+  max-width  : 20em;
   white-space: pre-wrap;
 }
 td[name=effect] {
   text-align : start;
-  max-width  : 50em;
+  max-width  : 40em;
 }
 /* === フィルタボタン ============================ */
 .btArea{
@@ -150,7 +150,7 @@ td[hiddenRow]{
   <body>
     <h3>アークナイツ　スキル一覧</h3>
     <p>性能は最大強化時です</p>
-    <p>最終更新:2025/09/04</p>
+    <p>最終更新:2025/09/17<br>更新内容：Mon3tr、ウィンドスクート、アランナの実装。レア度、職業、職分、1/2/3、タグをデフォルトでは非表示</p>
 <!-- フィルタ対象のテーブル -->
 <!-- <th>,<td>に「cmanFilterBtn」を定義するとフィルタボタンが付きます -->
 <!--  -->
@@ -521,6 +521,9 @@ td[hiddenRow]{
 <tr><td>荒蕪ラップランド</td><td>6</td><td>術師</td><td>操機術師</td><td>スキル2</td><td>狼たちの戯れ</td><td><img src="icon/技能_逐猎狂飙.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>18</td><td>28</td><td>22</td><td name="effect">浮遊ユニットの数+3、攻撃範囲拡大、攻撃力+120%、浮遊ユニットを放出し、範囲内の敵をランダムに対象として攻撃する。浮遊ユニット攻撃時、10%の確率で敵を1秒間恐怖状態にする。
 スキル発動中、浮遊ユニットは目標が倒されると、再度索敵を行う</td><td></td></tr>
 <tr><td>荒蕪ラップランド</td><td>6</td><td>術師</td><td>操機術師</td><td>スキル3</td><td>ディザストロ・フィナーレ</td><td><img src="icon/技能_终幕·浩劫.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>38</td><td>54</td><td>40</td><td name="effect">浮遊ユニットの数+2、攻撃力+80%、特殊形態の浮遊ユニットを放出し、それぞれが戦場全体の距離が近い敵を追尾して攻撃する。浮遊ユニットが目標の敵に到達すると、対象を3秒間の恐怖状態にし、浮遊ユニット周囲の敵の移動速度-50%、さらに1秒ごとに攻撃力の120%の術ダメージを与える（重複不可）。スキル発動中、浮遊ユニットは目標が倒されると、再度索敵を行う</td><td></td></tr>
+<tr><td>Mon3tr</td><td>6</td><td>医療</td><td>連鎖癒師</td><td>スキル1</td><td>戦術：過圧力連結</td><td><img src="icon/技能_策略：超压链接.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>自動発動</td><td>0</td><td>2</td><td>-</td><td name="effect">次に味方を治療する時、対象のHPを自身の攻撃力の200%回復し、その治療の跳躍回数+1</td><td></td></tr>
+<tr><td>Mon3tr</td><td>6</td><td>医療</td><td>連鎖癒師</td><td>スキル2</td><td>戦術：超飽和治療</td><td><img src="icon/技能_策略：超负荷.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>手動発動</td><td>13</td><td>15</td><td>30</td><td name="effect">再構成核を優先して治療する。再構成核はMon3trの治療を受けるたび、跳躍治療を追加で1回行う。第二素質の効果が2.8倍にまで上昇する</td><td></td></tr>
+<tr><td>Mon3tr</td><td>6</td><td>医療</td><td>連鎖癒師</td><td>スキル3</td><td>戦術：メルトダウン</td><td><img src="icon/技能_策略：熔毁.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>手動発動</td><td>11</td><td>15</td><td>25</td><td name="effect">攻撃範囲変化、再構成核の位置に移動し、攻撃力+330%、攻撃間隔が短縮、ブロック数+2、最大HP+5000、1秒ごとにHPを80失い、ブロック中の敵全員を同時に攻撃。通常攻撃が対象に確定ダメージを与えるようになり、攻撃時に自身のHPを攻撃力の50%治療する スキル終了時または致命的なダメージを受けた際、元の位置に戻る</td><td></td></tr>
 <tr><td>ケルシー</td><td>6</td><td>医療</td><td>医師</td><td>スキル1</td><td>指令：構造強化</td><td><img src="icon/技能_指令：结构加固.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>20</td><td>40</td><td name="effect">自身と「Mon3tr」の防御力+150%、自身が50%の確率で物理被ダメージを無効化する</td><td></td></tr>
 <tr><td>ケルシー</td><td>6</td><td>医療</td><td>医師</td><td>スキル2</td><td>指令：戦術連携</td><td><img src="icon/技能_指令：战术协同.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>0</td><td>8</td><td>20</td><td name="effect">攻撃速度+100、「Mon3tr」の攻撃力+90%、「Mon3tr」がブロック中の敵全員を同時に攻撃
 このスキルは「Mon3tr」と連動する</td><td></td></tr>
@@ -758,6 +761,8 @@ td[hiddenRow]{
 <tr><td>ウィスラッシュ</td><td>5</td><td>前衛</td><td>教官</td><td>スキル1</td><td>激励の美学</td><td><img src="icon/技能_激励艺术.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>0</td><td>30</td><td>20</td><td name="effect">素質の効果が3倍まで上昇、ブロック数が2以下の近距離ユニットにも半分の効果を与える</td><td></td></tr>
 <tr><td>ウィスラッシュ</td><td>5</td><td>前衛</td><td>教官</td><td>スキル2</td><td>鞭刃解放</td><td><img src="icon/技能_鞭刃.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>20</td><td>60</td><td>25</td><td name="effect">素質の効果が2倍まで上昇
 攻撃力+60%、攻撃範囲+1マス、ブロック数+1、ブロック中の敵全員を同時に攻撃</td><td></td></tr>
+<tr><td>ウィンドスクート</td><td>4</td><td>前衛</td><td>解放者</td><td>スキル1</td><td>攻防一如</td><td><img src="icon/技能_以攻为守.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>18</td><td>15</td><td name="effect">攻撃速度+50、防御力+55%</td><td></td></tr>
+<tr><td>ウィンドスクート</td><td>4</td><td>前衛</td><td>解放者</td><td>スキル2</td><td>快刀連斬</td><td><img src="icon/技能_招无虚发.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>40</td><td>25</td><td name="effect">攻撃範囲拡大、敵2体を同時に攻撃、攻撃が回避されなくなり、攻撃時、対象に攻撃力の200%の物理ダメージを与える</td><td></td></tr>
 <tr><td>ウィンドチャイム</td><td>5</td><td>前衛</td><td>重剣士</td><td>スキル1</td><td>攻撃力強化γ</td><td><img src="icon/技能_攻击力强化·γ型.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>30</td><td name="effect">攻撃力+100%</td><td></td></tr>
 <tr><td>ウィンドチャイム</td><td>5</td><td>前衛</td><td>重剣士</td><td>スキル2</td><td>郷思の念</td><td><img src="icon/技能_乡心无改.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>25</td><td>5</td><td name="effect">攻撃しなくなり、40%の加護を獲得し、攻撃力が+50%まで徐々に上昇する。スキル終了時、前方直線一定範囲の地面にいる敵全員に、その時点の攻撃力の230%の物理ダメージを与え、1秒間スタンさせる
 手動でスキルを停止可能</td><td></td></tr>
@@ -1043,6 +1048,8 @@ td[hiddenRow]{
 15秒間、攻撃力+90%、1秒ごとにHPが最大値の3%減少</td><td>自傷</td></tr>
 <tr><td>濯塵ハイビスカス</td><td>5</td><td>医療</td><td>呪癒師</td><td>スキル1</td><td>攻撃力強化γ</td><td><img src="icon/技能_攻击力强化·γ型.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>30</td><td name="effect">攻撃力+100%</td><td></td></tr>
 <tr><td>濯塵ハイビスカス</td><td>5</td><td>医療</td><td>呪癒師</td><td>スキル2</td><td>業の救済</td><td><img src="icon/技能_抚业之触.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>18</td><td>8</td><td name="effect">範囲内の敵最大2体に1秒ごとに攻撃力の170%の術ダメージを与え、その対象の移動速度-45%</td><td></td></tr>
+<tr><td>アランナ</td><td>5</td><td>補助</td><td>工匠</td><td>スキル1</td><td>エアブースター</td><td><img src="icon/技能_气动增压.png" width="50" height="50" loading="lazy"></td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td name="effect">支援装置の効果を受けているオペレーターの攻撃速度+23、支援装置の持続時間+30</td><td></td></tr>
+<tr><td>アランナ</td><td>5</td><td>補助</td><td>工匠</td><td>スキル2</td><td>ウルトラジャッキ</td><td><img src="icon/技能_“万斤顶”.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>20</td><td>15</td><td name="effect">攻撃力+50%、攻撃速度+50、素質の効果が2.7倍まで上昇、スキル終了後に支援装置を1個獲得</td><td></td></tr>
 <tr><td>イースチナ</td><td>5</td><td>補助</td><td>緩速師</td><td>スキル1</td><td>一心不乱</td><td><img src="icon/技能_专心致志.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>20</td><td>40</td><td>30</td><td name="effect">通常攻撃の間隔を超大幅に短縮(-1.1s)</td><td></td></tr>
 <tr><td>イースチナ</td><td>5</td><td>補助</td><td>緩速師</td><td>スキル2</td><td>嵐より生まれしもの</td><td><img src="icon/技能_文学风暴.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>30</td><td>50</td><td>25</td><td name="effect">攻撃力+75%、攻撃範囲拡大、攻撃対象数+2</td><td></td></tr>
 <tr><td>ヴァラルクビン</td><td>5</td><td>補助</td><td>祭儀師</td><td>スキル1</td><td>崩壊を視しとき</td><td><img src="icon/技能_我见崩毁之前.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>0</td><td>7</td><td>-</td><td name="effect">次の通常攻撃時、敵に攻撃力の130%の術ダメージを与え、さらに攻撃力の80%の壊死損傷を与える
@@ -1345,14 +1352,6 @@ HPが最大値の50%以上の場合、攻撃力+45%の勇猛状態を獲得し�
 <tr onlyIS><td>予備隊員-狙撃</td><td>3</td><td>狙撃</td><td>速射手</td><td>-</td><td></td><td><img src="icon/技能_无.png" width="50" height="50" loading="lazy"></td><td></td><td></td><td></td><td></td><td></td><td name="effect"></td><td></td></tr>
 <tr onlyIS><td>予備隊員-術師</td><td>3</td><td>術師</td><td>中堅術師</td><td>-</td><td></td><td><img src="icon/技能_无.png" width="50" height="50" loading="lazy"></td><td></td><td></td><td></td><td></td><td></td><td name="effect"></td><td></td></tr>
 <tr onlyIS><td>予備隊員-支援</td><td>3</td><td>医療</td><td>医師</td><td>-</td><td></td><td><img src="icon/技能_无.png" width="50" height="50" loading="lazy"></td><td></td><td></td><td></td><td></td><td></td><td name="effect"></td><td></td></tr>
-<tr unimplemented><td>Mon3tr</td><td>6</td><td>医療</td><td>連鎖癒師</td><td>スキル1</td><td>策略：超压链接</td><td><img src="icon/技能_策略：超压链接.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>自動発動</td><td>0</td><td>2</td><td>-</td><td name="effect">次に味方を治療する時、治療量が攻撃力の200%まで上昇し、治療の跳躍回数+1</td><td></td></tr>
-<tr unimplemented><td>Mon3tr</td><td>6</td><td>医療</td><td>連鎖癒師</td><td>スキル2</td><td>策略：超负荷</td><td><img src="icon/技能_策略：超负荷.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>手動発動</td><td>13</td><td>15</td><td>30</td><td name="effect">スキル発動後、Mon3trは再構成体を優先して治療、再構成体はMon3trの治療を受けるたびに跳躍回復を行う。素質2の効果が2.8倍に上昇</td><td></td></tr>
-<tr unimplemented><td>Mon3tr</td><td>6</td><td>医療</td><td>連鎖癒師</td><td>スキル3</td><td>策略：熔毁</td><td><img src="icon/技能_策略：熔毁.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>手動発動</td><td>11</td><td>15</td><td>25</td><td name="effect">スキル発動後、Mon3trの攻撃範囲が変化、再構成体の位置に移動し、攻撃力+330%、攻撃間隔短縮(-1.5)、ブロック数+2、最大HP+5000、HPを毎秒80失い、ブロック中の敵全員を同時に攻撃、ダメージが確定ダメージに変化、攻撃時、自身を攻撃力の50%で治療する。
-スキルが終了するか致命的なダメージを受けると初期の位置に戻る。</td><td></td></tr>
-<tr unimplemented><td>アランナ</td><td>5</td><td>補助</td><td>工匠</td><td>スキル1</td><td>气动增压</td><td><img src="icon/技能_气动增压.png" width="50" height="50" loading="lazy"></td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td name="effect">支援装置の影響を受けるオペレーターの攻撃速度+23、支援装置の持続時間+30秒</td><td></td></tr>
-<tr unimplemented><td>アランナ</td><td>5</td><td>補助</td><td>工匠</td><td>スキル2</td><td>“万斤顶”</td><td><img src="icon/技能_“万斤顶”.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>20</td><td>15</td><td name="effect">自身の攻撃力+50%、攻撃速度+50、素質効果が2.7倍に上昇。スキル終了時、支援装置を1つ獲得</td><td></td></tr>
-<tr unimplemented><td>ウインドスクート</td><td>4</td><td>前衛</td><td>解放者</td><td>スキル1</td><td>以攻为守</td><td><img src="icon/技能_以攻为守.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>18</td><td>15</td><td name="effect">攻撃速度+50、防御力+55%</td><td></td></tr>
-<tr unimplemented><td>ウインドスクート</td><td>4</td><td>前衛</td><td>解放者</td><td>スキル2</td><td>招无虚发</td><td><img src="icon/技能_招无虚发.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>40</td><td>25</td><td name="effect">攻撃範囲拡大、2体の敵を同時に攻撃、攻撃する度に攻撃力の200%の物理ダメージを与える。この攻撃は回避されない</td><td></td></tr>
 <tr unimplemented><td>サンクタミキサー</td><td>6</td><td>重装</td><td>哨戒衛</td><td>スキル1</td><td>铳骑主考官</td><td><img src="icon/技能_铳骑主考官.png" width="50" height="50" loading="lazy"></td><td>被撃回復</td><td>自動発動</td><td>3</td><td>4</td><td>-</td><td name="effect">次の攻撃が3連撃に変化し、それぞれの攻撃が攻撃力の190%の物理ダメージを与える。さらに、自身の周囲にいる弾薬系スキルを発動中の他の【ラテラーノ】オペレーター1名に弾薬を1発補充する。</td><td></td></tr>
 <tr unimplemented><td>サンクタミキサー</td><td>6</td><td>重装</td><td>哨戒衛</td><td>スキル2</td><td>八臂电锯侠</td><td><img src="icon/技能_八臂电锯侠.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>35</td><td>50</td><td>-</td><td name="effect">攻撃力+150%、防御力+130%。スキル中に致命的なダメージを受けた場合、即座に弾薬を20発消費してそのダメージを無効化する。
 合計50発の銃弾を撃ち切るとスキルが終了(手動でスキルを停止可能)</td><td>弾薬</td></tr>
@@ -2399,8 +2398,12 @@ function tFilterHideInit(){
   // 隠す項目を選択
   for (let i = 0; i <  elements.length; i++){
     if( elements[i].type == 'checkbox'){
-      if(elements[i].value == 'タグ'){
-         //elements[i].checked =false;
+      if(elements[i].value == '★' ||
+         elements[i].value == '職業' ||
+         elements[i].value == '職分' ||
+         elements[i].value == '1/2/3' ||
+         elements[i].value == 'タグ'){
+         elements[i].checked =false;
       }
     }
   }
@@ -2564,10 +2567,3 @@ function tableReset() {
     </script>
   </body>
 </html>
-
-
-
-
-
-
-
