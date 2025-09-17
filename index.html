@@ -150,7 +150,7 @@ td[hiddenRow]{
   <body>
     <h3>アークナイツ　スキル一覧</h3>
     <p>性能は最大強化時です</p>
-    <p>最終更新:2025/09/17<br>更新内容：Mon3tr、ウィンドスクート、アランナの実装。レア度、職業、職分、1/2/3、タグをデフォルトでは非表示</p>
+    <p>最終更新:2025/09/17<br>更新内容：Mon3tr、アランナ、ウィンドスクートの実装。レア度、職業、職分、1/2/3、タグをデフォルトでは非表示</p>
 <!-- フィルタ対象のテーブル -->
 <!-- <th>,<td>に「cmanFilterBtn」を定義するとフィルタボタンが付きます -->
 <!--  -->
@@ -761,8 +761,6 @@ td[hiddenRow]{
 <tr><td>ウィスラッシュ</td><td>5</td><td>前衛</td><td>教官</td><td>スキル1</td><td>激励の美学</td><td><img src="icon/技能_激励艺术.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>0</td><td>30</td><td>20</td><td name="effect">素質の効果が3倍まで上昇、ブロック数が2以下の近距離ユニットにも半分の効果を与える</td><td></td></tr>
 <tr><td>ウィスラッシュ</td><td>5</td><td>前衛</td><td>教官</td><td>スキル2</td><td>鞭刃解放</td><td><img src="icon/技能_鞭刃.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>20</td><td>60</td><td>25</td><td name="effect">素質の効果が2倍まで上昇
 攻撃力+60%、攻撃範囲+1マス、ブロック数+1、ブロック中の敵全員を同時に攻撃</td><td></td></tr>
-<tr><td>ウィンドスクート</td><td>4</td><td>前衛</td><td>解放者</td><td>スキル1</td><td>攻防一如</td><td><img src="icon/技能_以攻为守.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>18</td><td>15</td><td name="effect">攻撃速度+50、防御力+55%</td><td></td></tr>
-<tr><td>ウィンドスクート</td><td>4</td><td>前衛</td><td>解放者</td><td>スキル2</td><td>快刀連斬</td><td><img src="icon/技能_招无虚发.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>40</td><td>25</td><td name="effect">攻撃範囲拡大、敵2体を同時に攻撃、攻撃が回避されなくなり、攻撃時、対象に攻撃力の200%の物理ダメージを与える</td><td></td></tr>
 <tr><td>ウィンドチャイム</td><td>5</td><td>前衛</td><td>重剣士</td><td>スキル1</td><td>攻撃力強化γ</td><td><img src="icon/技能_攻击力强化·γ型.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>30</td><td name="effect">攻撃力+100%</td><td></td></tr>
 <tr><td>ウィンドチャイム</td><td>5</td><td>前衛</td><td>重剣士</td><td>スキル2</td><td>郷思の念</td><td><img src="icon/技能_乡心无改.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>25</td><td>5</td><td name="effect">攻撃しなくなり、40%の加護を獲得し、攻撃力が+50%まで徐々に上昇する。スキル終了時、前方直線一定範囲の地面にいる敵全員に、その時点の攻撃力の230%の物理ダメージを与え、1秒間スタンさせる
 手動でスキルを停止可能</td><td></td></tr>
@@ -1179,6 +1177,8 @@ td[hiddenRow]{
 <tr><td>アレーン</td><td>4</td><td>前衛</td><td>領主</td><td>スキル1</td><td>いたずら</td><td><img src="icon/技能_小玩笑.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>25</td><td>15</td><td name="effect">ブロック数が0になり、通常攻撃が敵に攻撃力の150%の物理ダメージを与える2連撃になる</td><td></td></tr>
 <tr><td>アレーン</td><td>4</td><td>前衛</td><td>領主</td><td>スキル2</td><td>フェイタルトリック</td><td><img src="icon/技能_致命恶作剧.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>20</td><td name="effect">攻撃範囲拡大、特性による遠距離攻撃時の攻撃力低下が無効化される
 攻撃対象数+1、攻撃時、対象に攻撃力の160%の術ダメージを与える</td><td></td></tr>
+<tr><td>ウィンドスクート</td><td>4</td><td>前衛</td><td>解放者</td><td>スキル1</td><td>攻防一如</td><td><img src="icon/技能_以攻为守.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>18</td><td>15</td><td name="effect">攻撃速度+50、防御力+55%</td><td></td></tr>
+<tr><td>ウィンドスクート</td><td>4</td><td>前衛</td><td>解放者</td><td>スキル2</td><td>快刀連斬</td><td><img src="icon/技能_招无虚发.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>40</td><td>25</td><td name="effect">攻撃範囲拡大、敵2体を同時に攻撃、攻撃が回避されなくなり、攻撃時、対象に攻撃力の200%の物理ダメージを与える</td><td></td></tr>
 <tr><td>ウタゲ</td><td>4</td><td>前衛</td><td>武者</td><td>スキル1</td><td>サボり</td><td><img src="icon/技能_分神.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>15</td><td>8</td><td name="effect">攻撃しなくなる。ブロック数が0になり、防御力+200%、1秒ごとにHPが最大値の10%回復</td><td></td></tr>
 <tr><td>ウタゲ</td><td>4</td><td>前衛</td><td>武者</td><td>スキル2</td><td>落地斬・突破</td><td><img src="icon/技能_落地斩·破门.png" width="50" height="50" loading="lazy"></td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td name="effect">配置後HPが50%減少。16秒間攻撃力+110%、通常攻撃が術ダメージを与える</td><td>自傷</td></tr>
 <tr><td>エステル</td><td>4</td><td>前衛</td><td>強襲者</td><td>スキル1</td><td>攻撃力強化β</td><td><img src="icon/技能_攻击力强化·β型.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>35</td><td>25</td><td name="effect">攻撃力+80%</td><td></td></tr>
