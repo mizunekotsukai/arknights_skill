@@ -1792,7 +1792,7 @@ function tFilterGo(argCol){
       filterBtn.style.backgroundColor = '#999'; // フィルタあり色
  
       for(let i = gTfStartRow; i < tr.length; i++){
-        var val = trim(tr[i].cells[wCol].innerText);
+        var val = tr[i].cells[wCol].innerText;
  
         //------------------------------------------------------
         // チェックボックス選択によるフィルタ
@@ -1812,6 +1812,7 @@ function tFilterGo(argCol){
               }
             }
           }else{
+            val = trim(val);
             if((val in itemSave)){
               checker = 1;
             }
@@ -2595,3 +2596,4 @@ function tableReset() {
     </script>
   </body>
 </html>
+
