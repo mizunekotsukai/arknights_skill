@@ -150,7 +150,7 @@ td[hiddenRow]{
   <body>
     <h3>アークナイツ　スキル一覧</h3>
     <p>性能は最大強化時です</p>
-    <p>最終更新:2025/10/16<br>更新内容：タグ列のフィルタ不具合修正</p>
+    <p>最終更新:2025/10/17<br>更新内容：サンクタ・ミキサー、レミュアン、新約エクシア、グレースベアラー、CONFESS-47実装。タグ列をデフォルトで表示</p>
 <!-- フィルタ対象のテーブル -->
 <!-- <th>,<td>に「cmanFilterBtn」を定義するとフィルタボタンが付きます -->
 <!--  -->
@@ -521,9 +521,6 @@ td[hiddenRow]{
 <tr><td>荒蕪ラップランド</td><td>6</td><td>術師</td><td>操機術師</td><td>スキル2</td><td>狼たちの戯れ</td><td><img src="icon/技能_逐猎狂飙.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>18</td><td>28</td><td>22</td><td name="effect">浮遊ユニットの数+3、攻撃範囲拡大、攻撃力+120%、浮遊ユニットを放出し、範囲内の敵をランダムに対象として攻撃する。浮遊ユニット攻撃時、10%の確率で敵を1秒間恐怖状態にする。
 スキル発動中、浮遊ユニットは目標が倒されると、再度索敵を行う</td><td></td></tr>
 <tr><td>荒蕪ラップランド</td><td>6</td><td>術師</td><td>操機術師</td><td>スキル3</td><td>ディザストロ・フィナーレ</td><td><img src="icon/技能_终幕·浩劫.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>38</td><td>54</td><td>40</td><td name="effect">浮遊ユニットの数+2、攻撃力+80%、特殊形態の浮遊ユニットを放出し、それぞれが戦場全体の距離が近い敵を追尾して攻撃する。浮遊ユニットが目標の敵に到達すると、対象を3秒間の恐怖状態にし、浮遊ユニット周囲の敵の移動速度-50%、さらに1秒ごとに攻撃力の120%の術ダメージを与える（重複不可）。スキル発動中、浮遊ユニットは目標が倒されると、再度索敵を行う</td><td></td></tr>
-<tr><td>Mon3tr</td><td>6</td><td>医療</td><td>連鎖癒師</td><td>スキル1</td><td>戦術：過圧力連結</td><td><img src="icon/技能_策略：超压链接.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>自動発動</td><td>0</td><td>2</td><td>-</td><td name="effect">次に味方を治療する時、対象のHPを自身の攻撃力の200%回復し、その治療の跳躍回数+1</td><td></td></tr>
-<tr><td>Mon3tr</td><td>6</td><td>医療</td><td>連鎖癒師</td><td>スキル2</td><td>戦術：超飽和治療</td><td><img src="icon/技能_策略：超负荷.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>手動発動</td><td>13</td><td>15</td><td>30</td><td name="effect">再構成核を優先して治療する。再構成核はMon3trの治療を受けるたび、跳躍治療を追加で1回行う。第二素質の効果が2.8倍にまで上昇する</td><td></td></tr>
-<tr><td>Mon3tr</td><td>6</td><td>医療</td><td>連鎖癒師</td><td>スキル3</td><td>戦術：メルトダウン</td><td><img src="icon/技能_策略：熔毁.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>手動発動</td><td>11</td><td>15</td><td>25</td><td name="effect">攻撃範囲変化、再構成核の位置に移動し、攻撃力+330%、攻撃間隔が短縮、ブロック数+2、最大HP+5000、1秒ごとにHPを80失い、ブロック中の敵全員を同時に攻撃。通常攻撃が対象に確定ダメージを与えるようになり、攻撃時に自身のHPを攻撃力の50%治療する スキル終了時または致命的なダメージを受けた際、元の位置に戻る</td><td></td></tr>
 <tr><td>ケルシー</td><td>6</td><td>医療</td><td>医師</td><td>スキル1</td><td>指令：構造強化</td><td><img src="icon/技能_指令：结构加固.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>20</td><td>40</td><td name="effect">自身と「Mon3tr」の防御力+150%、自身が50%の確率で物理被ダメージを無効化する</td><td></td></tr>
 <tr><td>ケルシー</td><td>6</td><td>医療</td><td>医師</td><td>スキル2</td><td>指令：戦術連携</td><td><img src="icon/技能_指令：战术协同.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>0</td><td>8</td><td>20</td><td name="effect">攻撃速度+100、「Mon3tr」の攻撃力+90%、「Mon3tr」がブロック中の敵全員を同時に攻撃
 このスキルは「Mon3tr」と連動する</td><td></td></tr>
@@ -562,9 +559,8 @@ td[hiddenRow]{
 <tr><td>ヴィルトゥオーサ</td><td>6</td><td>補助</td><td>祭儀師</td><td>スキル3</td><td>「自由のタンゴ」</td><td><img src="icon/技能_“自由的探戈”.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>40</td><td>60</td><td>40</td><td name="effect">攻撃しなくなり、攻撃範囲拡大、攻撃力+180%、第二素質の効果が2.5倍まで上昇。スキル発動中、攻撃範囲内の自身を除くオペレーターを対象に、最大HPが最も高い者の最大HP+30%、攻撃力が最も高い者の攻撃力+30%、防御力が最も高い者の防御力+30%</td><td></td></tr>
 <tr><td>シヴィライト・エテルナ</td><td>6</td><td>補助</td><td>吟遊者</td><td>スキル1</td><td>身に纏わる過去</td><td><img src="icon/技能_往昔萦绕身旁.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>0</td><td>65</td><td>-</td><td name="effect">特性の効果が35%まで上昇し、「微塵」の再生速度を速める
 退場まで効果継続</td><td>永続</td></tr>
-<tr><td>シヴィライト・エテルナ</td><td>6</td><td>補助</td><td>吟遊者</td><td>スキル2</td><td>未だ届かぬ明日</td><td><img src="icon/技能_明日渺远不及.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>20</td><td>35</td><td>35</td><td name="effect">「微塵」の最大数+3、即座に6個の「微塵」を獲得、「微塵」の旋回範囲拡大、攻撃範囲内の味方にシヴィライト・エテルナの攻撃力の100%の鼓舞状態を付与する。
-「微塵」が味方に触れても消失しなくなり、「微塵」が触れた敵にシヴィライト・エテルナの攻撃力の275%の確定ダメージを与え、3.5秒間バインドさせる</td><td></td></tr>
-<tr><td>シヴィライト・エテルナ</td><td>6</td><td>補助</td><td>吟遊者</td><td>スキル3</td><td>紡ぎ直される現世</td><td><img src="icon/技能_编织重构现世.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>35</td><td>55</td><td>30</td><td name="effect">攻撃範囲拡大、特性の効果が90%まで上昇し、「微塵」が消失しなくなり、攻撃範囲内の味方にシヴィライト・エテルナの最大HPの100%の鼓舞状態を付与し、2秒毎に攻撃範囲内の味方の現在HPを均等になるように分配する</td><td></td></tr>
+<tr><td>シヴィライト・エテルナ</td><td>6</td><td>補助</td><td>吟遊者</td><td>スキル2</td><td>未だ届かぬ明日</td><td><img src="icon/技能_明日渺远不及.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>20</td><td>35</td><td>35</td><td name="effect">「微塵」の上限+3、即座に「微塵」を6個獲得する。「微塵」の回転半径が拡大し、攻撃範囲内の自身以外の味方全員にシヴィライト・エテルナの攻撃力の100%の鼓舞状態を付与する。「微塵」が味方に命中しなくなり、敵に命中した際にはシヴィライト・エテルナの攻撃力の275%の確定ダメージを与え、対象を3.5秒間バインドする</td><td></td></tr>
+<tr><td>シヴィライト・エテルナ</td><td>6</td><td>補助</td><td>吟遊者</td><td>スキル3</td><td>紡ぎ直される現世</td><td><img src="icon/技能_编织重构现世.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>35</td><td>55</td><td>30</td><td name="effect">攻撃範囲拡大、特性の効果が90%まで上昇する。「微塵」が消失しなくなり、攻撃範囲内の自身以外の味方全員にシヴィライト・エテルナの最大HPの100%の鼓舞状態を付与し、2秒ごとに攻撃範囲内の味方全員のHPを再配分する</td><td></td></tr>
 <tr><td>スズラン</td><td>6</td><td>補助</td><td>緩速師</td><td>スキル1</td><td>全身全霊</td><td><img src="icon/技能_全力以赴.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>0</td><td>20</td><td>30</td><td name="effect">攻撃力+80%、攻撃速度+30</td><td></td></tr>
 <tr><td>スズラン</td><td>6</td><td>補助</td><td>緩速師</td><td>スキル2</td><td>過ぎし日の舞</td><td><img src="icon/技能_儿时的舞乐.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>0</td><td>80</td><td>-</td><td name="effect">攻撃力+60%、敵3体を同時に攻撃
 退場まで効果継続</td><td>永続</td></tr>
@@ -576,32 +572,30 @@ td[hiddenRow]{
 アクティブ：攻撃力+60%、防御力+60%、ブロック中の敵全員を同時に攻撃。さらに装置の効果が「対象のSPを2秒ごと1回復」になるが、装置のHP減少速度+100%
 スキル終了時、装置を1個獲得</td><td></td></tr>
 <tr><td>ステインレス</td><td>6</td><td>補助</td><td>工匠</td><td>スキル3</td><td>鉄鉗号・プロトタイプ</td><td><img src="icon/技能_铁钳号·原型机.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>20</td><td>35</td><td>30</td><td name="effect">パッシブ：装置が味方の攻撃対象になるが、味方の攻撃によってHPは減少しない。装置自身のスキルが発動すると、装置前方の敵に範囲物理ダメージを与え、装置のHPが減少する
-アクティブ：装置を1個獲得し、攻撃力+55%、攻撃速度+55
-支援装置スキル：スキル発動時、自身のHPが2.5%減少し、前方の敵1体にステインレスの攻撃力の300%の物理ダメージを与え、対象の周囲一定範囲内の敵全員にステインレスの攻撃力の150%の物理ダメージを与える</td><td></td></tr>
+アクティブ：装置を1個獲得し、攻撃力+55%、攻撃速度+55</td><td></td></tr>
 <tr><td>ノーシス</td><td>6</td><td>補助</td><td>呪詛師</td><td>スキル1</td><td>思考加速</td><td><img src="icon/技能_高速思考.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>0</td><td>4</td><td>-</td><td name="effect">次の通常攻撃時、2回連続で攻撃力の170%の術ダメージを与える</td><td></td></tr>
 <tr><td>ノーシス</td><td>6</td><td>補助</td><td>呪詛師</td><td>スキル2</td><td>ゼロバースト</td><td><img src="icon/技能_零度爆发.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>0</td><td>6</td><td>-</td><td name="effect">攻撃範囲内の敵全員に4秒の寒冷状態を付与し、攻撃力の200%の術ダメージを与える
 オーバーチャージ追加効果：追加でもう一度寒冷状態を付与する</td><td>オーバーチャージ</td></tr>
-<tr><td>ノーシス</td><td>6</td><td>補助</td><td>呪詛師</td><td>スキル3</td><td>ハイポサーミア</td><td><img src="icon/技能_失温症.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>25</td><td>40</td><td>13</td><td name="effect">攻撃速度+130、通常攻撃が敵最大2体を同時に攻撃可能になり、凍結状態ではない敵を優先して攻撃する。
-攻撃範囲内の敵全員の凍結状態の継続時間がスキル終了まで延長され、スキル終了時凍結状態の敵全員に攻撃力の600%の術ダメージを与え、凍結状態を解除する</td><td></td></tr>
+<tr><td>ノーシス</td><td>6</td><td>補助</td><td>呪詛師</td><td>スキル3</td><td>ハイポサーミア</td><td><img src="icon/技能_失温症.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>25</td><td>40</td><td>13</td><td name="effect">攻撃速度+130、通常攻撃が敵最大2体を同時に攻撃可能になり、凍結状態ではない敵を優先して攻撃する。攻撃範囲内の敵全員の凍結状態の継続時間がスキル終了時まで延長され、スキル終了時凍結状態の敵全員に攻撃力の600%の術ダメージを与え、凍結状態を解除する</td><td></td></tr>
 <tr><td>マゼラン</td><td>6</td><td>補助</td><td>召喚師</td><td>スキル1</td><td>フリーズモジュール</td><td><img src="icon/技能_高效制冷模块.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>20</td><td>30</td><td>15</td><td name="effect">パッシブ：自身とドローンの攻撃範囲内の敵を3秒ごとに1.0秒足止めする
 アクティブ：「1.0秒の足止め」が「2.5秒のバインド」に変化する
-効果時間終了後配置中のドローンを全て回収</td><td></td></tr>
+スキル終了時配置中のドローンを全て回収</td><td></td></tr>
 <tr><td>マゼラン</td><td>6</td><td>補助</td><td>召喚師</td><td>スキル2</td><td>レーザーモジュール</td><td><img src="icon/技能_激光开采模块.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>25</td><td>38</td><td>15</td><td name="effect">パッシブ：ドローンが術攻撃を行い、近距離ユニットとして配置可能
-アクティブ：自身とドローンの攻撃速度+150、ドローンが範囲攻撃を行う。効果時間終了後配置中のドローンを全て回収</td><td></td></tr>
+アクティブ：自身とドローンの攻撃速度+150、ドローンが範囲攻撃を行う。スキル終了時配置中のドローンを全て回収</td><td></td></tr>
 <tr><td>マゼラン</td><td>6</td><td>補助</td><td>召喚師</td><td>スキル3</td><td>アサルトモジュール</td><td><img src="icon/技能_武装打击模块.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>25</td><td>38</td><td>15</td><td name="effect">パッシブ：ドローンが範囲物理攻撃を行い、遠距離ユニットとして配置可能
-アクティブ：自身とドローンの攻撃力+150%、ドローンの通常攻撃のダメージ発生範囲拡大｡効果時間終了後配置中の全てのドローンを回収</td><td></td></tr>
+アクティブ：自身とドローンの攻撃力+150%、ドローンの通常攻撃のダメージ発生範囲拡大。スキル終了時配置中のドローンを全て回収</td><td></td></tr>
 <tr><td>リィン</td><td>6</td><td>補助</td><td>召喚師</td><td>スキル1</td><td>重ねて酒を進み</td><td><img src="icon/技能_重进酒.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>25</td><td>25</td><td name="effect">パッシブ：召喚物を近距離ユニットとして配置可能
 アクティブ：自身と召喚物の攻撃力+50%、攻撃速度+50、召喚物の通常攻撃が術攻撃になる
 スキル発動時、召喚物を1体獲得</td><td></td></tr>
 <tr><td>リィン</td><td>6</td><td>補助</td><td>召喚師</td><td>スキル2</td><td>笑いて瑟を鼓せ</td><td><img src="icon/技能_笑鸣瑟.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>5</td><td>13</td><td>-</td><td name="effect">パッシブ：術攻撃を行う召喚物を遠距離ユニットとして配置可能
-アクティブ：自身と召喚物が攻撃範囲内の敵2体に攻撃力の450%の術ダメージを与え、3秒間バインドする
+アクティブ：自身と召喚物が攻撃範囲内の敵2体に攻撃力の450%の術ダメージを与え、3秒間バインドさせる
 スキル終了時、HPが最大値の半分以下の召喚物を全て回収する。2回チャージ可能</td><td>チャージ</td></tr>
 <tr><td>リィン</td><td>6</td><td>補助</td><td>召喚師</td><td>スキル3</td><td>寧ろ吾をなさん</td><td><img src="icon/技能_宁作吾.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>40</td><td>30</td><td name="effect">パッシブ：召喚物を近距離ユニットとして配置可能。召喚物の攻撃範囲内に自身の召喚物が存在する場合、両者が合体して上位形態になる
 アクティブ：自身と召喚物の攻撃力+100%、防御力+100%、召喚物が0.5秒ごとに隣接4マス内にいる敵全員にリィンの攻撃力の20%の術ダメージを与える
 スキル終了時、召喚物を1体獲得</td><td></td></tr>
 <tr><td>淬羽サイレンス</td><td>6</td><td>補助</td><td>祈祷師</td><td>スキル1</td><td>止まらぬ歩み</td><td><img src="icon/技能_进取之心.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>25</td><td name="effect">攻撃力+80%</td><td></td></tr>
 <tr><td>淬羽サイレンス</td><td>6</td><td>補助</td><td>祈祷師</td><td>スキル2</td><td>俯瞰する視点</td><td><img src="icon/技能_俯瞰视界.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>14</td><td>24</td><td>12</td><td name="effect">攻撃速度+60、スキル発動中は支援ドローンを1体使用可能
-ドローンは配置後、周囲の味方に淬羽サイレンスの第一素質の3.0倍の効果を付与。スキルが終了するか、淬羽サイレンスが退場するとドローンも消滅</td><td></td></tr>
+ドローンは配置後、周囲の味方に淬羽サイレンスの第一素質の3倍の効果を付与。スキルが終了するか、淬羽サイレンスが退場するとドローンも消滅</td><td></td></tr>
 <tr><td>淬羽サイレンス</td><td>6</td><td>補助</td><td>祈祷師</td><td>スキル3</td><td>先駆者たちの翼</td><td><img src="icon/技能_无畏者协议.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>20</td><td>30</td><td>60</td><td name="effect">攻撃力+30%、第一素質の効果が1.8倍まで上昇。
 スキル発動中1回限り、攻撃範囲内にいる味方が致命的なダメージを受けた際、対象のHPが10秒間1残る効果が発動
 使用上限2回、手動でスキルを停止可能</td><td></td></tr>
@@ -609,21 +603,20 @@ td[hiddenRow]{
 <tr><td>濁心スカジ</td><td>6</td><td>補助</td><td>吟遊者</td><td>スキル2</td><td>同葬無光の願</td><td><img src="icon/技能_同葬无光之愿.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>0</td><td>56</td><td>-</td><td name="effect">攻撃範囲内の自身以外の味方全員に濁心スカジの攻撃力と防御力の60%の鼓舞状態を付与して、特性の効果が20%まで上昇する
 退場まで効果継続</td><td>永続</td></tr>
 <tr><td>濁心スカジ</td><td>6</td><td>補助</td><td>吟遊者</td><td>スキル3</td><td>「満ち潮、枯れ潮」</td><td><img src="icon/技能_潮涌，潮枯_.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>35</td><td>20</td><td name="effect">特性のHP回復効果が「自身のHPが1秒ごとに5%減少」に変化する。1秒ごとに攻撃範囲内の敵全員に濁心スカジの攻撃力の70%の確定ダメージを与え（自身とシーボーンの与ダメージが重複可能）、攻撃範囲内の味方全員に濁心スカジの攻撃力の110%の鼓舞状態を付与する</td><td>自傷</td></tr>
-<tr><td>Ela</td><td>6</td><td>特殊</td><td>罠師</td><td>スキル1</td><td>視界遮断</td><td><img src="icon/技能_眩目阻滞.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>0</td><td>18</td><td>-</td><td name="effect">パッシブ：罠発動時、周囲の敵全員を10秒間足止めし、効果時間中対象の物理・術攻撃の命中率-40%
-アクティブ：罠を1個獲得</td><td></td></tr>
+<tr><td>Ela</td><td>6</td><td>特殊</td><td>罠師</td><td>スキル1</td><td>視界遮断</td><td><img src="icon/技能_眩目阻滞.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>0</td><td>18</td><td>-</td><td name="effect">発動時、周囲一定範囲内の敵全員を10秒間足止めし、効果時間中対象の物理・術攻撃の命中率-40%</td><td></td></tr>
 <tr><td>Ela</td><td>6</td><td>特殊</td><td>罠師</td><td>スキル2</td><td>ショックディフェンス</td><td><img src="icon/技能_震荡坚守.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>手動発動</td><td>12</td><td>16</td><td>20</td><td name="effect">パッシブ：罠発動時、周囲一定範囲内の敵全員を5秒間スタンさせる
 アクティブ：展開型シールドを設置し、防御力+300%。さらに自身の攻撃範囲が縮小し、通常攻撃が範囲物理攻撃になり、攻撃対象の防御力を800無視する
 スキル終了時、罠を1個獲得</td><td></td></tr>
 <tr><td>Ela</td><td>6</td><td>特殊</td><td>罠師</td><td>スキル3</td><td>「ボサックテンペスト」</td><td><img src="icon/技能_“博萨克风暴”.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>16</td><td>34</td><td>-</td><td name="effect">パッシブ：罠発動時、周囲一定範囲内の敵全員を7秒間足止めし、35%の脆弱状態を付与する
-アクティブ：攻撃間隔を短縮(-0.35)し、攻撃力+90%。GRZMOTマインの影響を受けている敵を優先して攻撃
+アクティブ：攻撃間隔を短縮し、攻撃力+90%。GRZMOTマインの影響を受けている敵を優先して攻撃
 合計40発の銃弾を撃ち切るとスキルが終了（手動でスキルを停止可能）。スキル終了時に罠を2個獲得</td><td>弾薬</td></tr>
 <tr><td>ア</td><td>6</td><td>特殊</td><td>鬼才</td><td>スキル1</td><td>高速射撃</td><td><img src="icon/技能_快速射击.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>20</td><td>30</td><td>30</td><td name="effect">攻撃速度+100</td><td></td></tr>
 <tr><td>ア</td><td>6</td><td>特殊</td><td>鬼才</td><td>スキル2</td><td>劇性増強剤・γ</td><td><img src="icon/技能_爆发剂·γ型.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>25</td><td>30</td><td>30</td><td name="effect">前方にいる最も近い味方1人（真正面を優先する）に500の攻撃力で15回攻撃し、その後効果時間終了まで自身と対象の防御力、最大HP+80%</td><td></td></tr>
 <tr><td>ア</td><td>6</td><td>特殊</td><td>鬼才</td><td>スキル3</td><td>劇性増強剤・ドリアン</td><td><img src="icon/技能_爆发剂·榴莲味.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>30</td><td>35</td><td>20</td><td name="effect">前方にいる最も近い味方1人（真正面を優先する）に500の攻撃力で15回攻撃し、その後効果時間終了まで自身と対象の攻撃力+50%、攻撃速度+50</td><td></td></tr>
 <tr><td>アスカロン</td><td>6</td><td>特殊</td><td>潜伏者</td><td>スキル1</td><td>追襲</td><td><img src="icon/技能_追袭.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>4</td><td>7</td><td>-</td><td name="effect">次の通常攻撃時、攻撃力が210%まで上昇し、2回連続攻撃する
 3回チャージ可能</td><td>チャージ</td></tr>
-<tr><td>アスカロン</td><td>6</td><td>特殊</td><td>潜伏者</td><td>スキル2</td><td>恩賜</td><td><img src="icon/技能_恩赐.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>20</td><td>35</td><td name="effect">攻撃力+130%、攻撃範囲内にいる敵全員の移動速度-60%、対象を倒す際にその周囲にいる地上の敵全員に第一素質の効果を付与する</td><td></td></tr>
-<tr><td>アスカロン</td><td>6</td><td>特殊</td><td>潜伏者</td><td>スキル3</td><td>降臨</td><td><img src="icon/技能_降临.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>35</td><td>45</td><td>45</td><td name="effect">攻撃範囲拡大、攻撃力+50%、攻撃間隔がかなり短縮(-1.5s)する。攻撃範囲内の地上にいる敵の物理・術攻撃の命中率-50%。敵に攻撃されやすくなり、敵の攻撃が外れるか、自身が回避に成功した時、HPが最大値の8%回復する</td><td></td></tr>
+<tr><td>アスカロン</td><td>6</td><td>特殊</td><td>潜伏者</td><td>スキル2</td><td>恩賜</td><td><img src="icon/技能_恩赐.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>20</td><td>35</td><td name="effect">攻撃力+130%、攻撃範囲内の地上にいる敵全員の移動速度-60%、対象が撃破される際、その周囲にいる敵全員に第一素質の効果を付与する</td><td></td></tr>
+<tr><td>アスカロン</td><td>6</td><td>特殊</td><td>潜伏者</td><td>スキル3</td><td>降臨</td><td><img src="icon/技能_降临.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>35</td><td>45</td><td>45</td><td name="effect">攻撃範囲拡大、攻撃力+50%、攻撃間隔がかなり短縮する。攻撃範囲内の地上にいる敵の物理・術攻撃の命中率-50%。敵に攻撃されやすくなり、敵の攻撃が外れるか、自身が回避に成功した時、HPが最大値の8%回復する</td><td></td></tr>
 <tr><td>ウィーディ</td><td>6</td><td>特殊</td><td>推撃手</td><td>スキル1</td><td>砲身強打</td><td><img src="icon/技能_炮管敲击.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>0</td><td>5</td><td>-</td><td name="effect">次の通常攻撃時、敵をかなりの力で突き飛ばし、攻撃力の150%の物理ダメージを与え、1.2秒間スタンさせる</td><td></td></tr>
 <tr><td>ウィーディ</td><td>6</td><td>特殊</td><td>推撃手</td><td>スキル2</td><td>ハイドロキャノン</td><td><img src="icon/技能_水炮模式.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>0</td><td>70</td><td>-</td><td name="effect">通常攻撃の間隔を延長し、攻撃力+200%、攻撃範囲+2マス、通常攻撃が遠距離範囲攻撃になり、攻撃対象を相当の力で突き飛ばす
 退場まで効果継続</td><td>永続</td></tr>
@@ -1046,8 +1039,6 @@ td[hiddenRow]{
 15秒間、攻撃力+90%、1秒ごとにHPが最大値の3%減少</td><td>自傷</td></tr>
 <tr><td>濯塵ハイビスカス</td><td>5</td><td>医療</td><td>呪癒師</td><td>スキル1</td><td>攻撃力強化γ</td><td><img src="icon/技能_攻击力强化·γ型.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>30</td><td name="effect">攻撃力+100%</td><td></td></tr>
 <tr><td>濯塵ハイビスカス</td><td>5</td><td>医療</td><td>呪癒師</td><td>スキル2</td><td>業の救済</td><td><img src="icon/技能_抚业之触.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>18</td><td>8</td><td name="effect">範囲内の敵最大2体に1秒ごとに攻撃力の170%の術ダメージを与え、その対象の移動速度-45%</td><td></td></tr>
-<tr><td>アランナ</td><td>5</td><td>補助</td><td>工匠</td><td>スキル1</td><td>エアブースター</td><td><img src="icon/技能_气动增压.png" width="50" height="50" loading="lazy"></td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td name="effect">支援装置の効果を受けているオペレーターの攻撃速度+23、支援装置の持続時間+30</td><td></td></tr>
-<tr><td>アランナ</td><td>5</td><td>補助</td><td>工匠</td><td>スキル2</td><td>ウルトラジャッキ</td><td><img src="icon/技能_“万斤顶”.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>20</td><td>15</td><td name="effect">攻撃力+50%、攻撃速度+50、素質の効果が2.7倍まで上昇、スキル終了後に支援装置を1個獲得</td><td></td></tr>
 <tr><td>イースチナ</td><td>5</td><td>補助</td><td>緩速師</td><td>スキル1</td><td>一心不乱</td><td><img src="icon/技能_专心致志.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>20</td><td>40</td><td>30</td><td name="effect">通常攻撃の間隔を超大幅に短縮(-1.1s)</td><td></td></tr>
 <tr><td>イースチナ</td><td>5</td><td>補助</td><td>緩速師</td><td>スキル2</td><td>嵐より生まれしもの</td><td><img src="icon/技能_文学风暴.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>30</td><td>50</td><td>25</td><td name="effect">攻撃力+75%、攻撃範囲拡大、攻撃対象数+2</td><td></td></tr>
 <tr><td>ヴァラルクビン</td><td>5</td><td>補助</td><td>祭儀師</td><td>スキル1</td><td>崩壊を視しとき</td><td><img src="icon/技能_我见崩毁之前.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>0</td><td>7</td><td>-</td><td name="effect">次の通常攻撃時、敵に攻撃力の130%の術ダメージを与え、さらに攻撃力の80%の壊死損傷を与える
@@ -1177,8 +1168,6 @@ td[hiddenRow]{
 <tr><td>アレーン</td><td>4</td><td>前衛</td><td>領主</td><td>スキル1</td><td>いたずら</td><td><img src="icon/技能_小玩笑.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>25</td><td>15</td><td name="effect">ブロック数が0になり、通常攻撃が敵に攻撃力の150%の物理ダメージを与える2連撃になる</td><td></td></tr>
 <tr><td>アレーン</td><td>4</td><td>前衛</td><td>領主</td><td>スキル2</td><td>フェイタルトリック</td><td><img src="icon/技能_致命恶作剧.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>20</td><td name="effect">攻撃範囲拡大、特性による遠距離攻撃時の攻撃力低下が無効化される
 攻撃対象数+1、攻撃時、対象に攻撃力の160%の術ダメージを与える</td><td></td></tr>
-<tr><td>ウィンドスクート</td><td>4</td><td>前衛</td><td>解放者</td><td>スキル1</td><td>攻防一如</td><td><img src="icon/技能_以攻为守.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>18</td><td>15</td><td name="effect">攻撃速度+50、防御力+55%</td><td></td></tr>
-<tr><td>ウィンドスクート</td><td>4</td><td>前衛</td><td>解放者</td><td>スキル2</td><td>快刀連斬</td><td><img src="icon/技能_招无虚发.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>40</td><td>25</td><td name="effect">攻撃範囲拡大、敵2体を同時に攻撃、攻撃が回避されなくなり、攻撃時、対象に攻撃力の200%の物理ダメージを与える</td><td></td></tr>
 <tr><td>ウタゲ</td><td>4</td><td>前衛</td><td>武者</td><td>スキル1</td><td>サボり</td><td><img src="icon/技能_分神.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>15</td><td>8</td><td name="effect">攻撃しなくなる。ブロック数が0になり、防御力+200%、1秒ごとにHPが最大値の10%回復</td><td></td></tr>
 <tr><td>ウタゲ</td><td>4</td><td>前衛</td><td>武者</td><td>スキル2</td><td>落地斬・突破</td><td><img src="icon/技能_落地斩·破门.png" width="50" height="50" loading="lazy"></td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td name="effect">配置後HPが50%減少。16秒間攻撃力+110%、通常攻撃が術ダメージを与える</td><td>自傷</td></tr>
 <tr><td>エステル</td><td>4</td><td>前衛</td><td>強襲者</td><td>スキル1</td><td>攻撃力強化β</td><td><img src="icon/技能_攻击力强化·β型.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>35</td><td>25</td><td name="effect">攻撃力+80%</td><td></td></tr>
@@ -1352,28 +1341,37 @@ HPが最大値の50%以上の場合、攻撃力+45%の勇猛状態を獲得し�
 <tr onlyIS><td>予備隊員-狙撃</td><td>3</td><td>狙撃</td><td>速射手</td><td>-</td><td></td><td><img src="icon/技能_无.png" width="50" height="50" loading="lazy"></td><td></td><td></td><td></td><td></td><td></td><td name="effect"></td><td></td></tr>
 <tr onlyIS><td>予備隊員-術師</td><td>3</td><td>術師</td><td>中堅術師</td><td>-</td><td></td><td><img src="icon/技能_无.png" width="50" height="50" loading="lazy"></td><td></td><td></td><td></td><td></td><td></td><td name="effect"></td><td></td></tr>
 <tr onlyIS><td>予備隊員-支援</td><td>3</td><td>医療</td><td>医師</td><td>-</td><td></td><td><img src="icon/技能_无.png" width="50" height="50" loading="lazy"></td><td></td><td></td><td></td><td></td><td></td><td name="effect"></td><td></td></tr>
-<tr unimplemented><td>サンクタミキサー</td><td>6</td><td>重装</td><td>哨戒衛</td><td>スキル1</td><td>铳骑主考官</td><td><img src="icon/技能_铳骑主考官.png" width="50" height="50" loading="lazy"></td><td>被撃回復</td><td>自動発動</td><td>3</td><td>4</td><td>-</td><td name="effect">次の攻撃が3連撃に変化し、それぞれの攻撃が攻撃力の190%の物理ダメージを与える。さらに、自身の周囲にいる弾薬系スキルを発動中の他の【ラテラーノ】オペレーター1名に弾薬を1発補充する。</td><td></td></tr>
-<tr unimplemented><td>サンクタミキサー</td><td>6</td><td>重装</td><td>哨戒衛</td><td>スキル2</td><td>八臂电锯侠</td><td><img src="icon/技能_八臂电锯侠.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>35</td><td>50</td><td>-</td><td name="effect">攻撃力+150%、防御力+130%。スキル中に致命的なダメージを受けた場合、即座に弾薬を20発消費してそのダメージを無効化する。
-合計50発の銃弾を撃ち切るとスキルが終了(手動でスキルを停止可能)</td><td>弾薬</td></tr>
-<tr unimplemented><td>サンクタミキサー</td><td>6</td><td>重装</td><td>哨戒衛</td><td>スキル3</td><td>退休前布道</td><td><img src="icon/技能_退休前布道.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>25</td><td>35</td><td>-</td><td name="effect">スキル発動時、他のすべての【ラテラーノ】オペレーターに弾薬を4発補充する。
-攻撃範囲が拡大し、最大HP+80%、攻撃力+220%、防御力+80%。自動で敵を攻撃しなくなり、攻撃を受けた際、攻撃範囲内の最大3体の敵に対して即座に1回反撃を行う（反撃の最小間隔は実際の攻撃間隔の10%）。
-合計30発の銃弾を撃ち切るとスキルが終了(手動でスキルを停止可能)</td><td>弾薬</td></tr>
-<tr unimplemented><td>レミュアン</td><td>6</td><td>狙撃</td><td>戦術射手</td><td>スキル1</td><td>再開の挨拶</td><td><img src="icon/技能_重逢问候.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>自動発動</td><td>0</td><td>8</td><td>-</td><td name="effect">攻撃時、攻撃力が210%に上昇し、攻撃対象数+1
+<tr><td>Mon3tr</td><td>6</td><td>医療</td><td>連鎖癒師</td><td>スキル1</td><td>戦術：過圧力連結</td><td><img src="icon/技能_策略：超压链接.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>自動発動</td><td>0</td><td>2</td><td>-</td><td name="effect">次に味方を治療する時、対象のHPを自身の攻撃力の200%回復し、その治療の跳躍回数+1</td><td></td></tr>
+<tr><td>Mon3tr</td><td>6</td><td>医療</td><td>連鎖癒師</td><td>スキル2</td><td>戦術：超飽和治療</td><td><img src="icon/技能_策略：超负荷.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>手動発動</td><td>13</td><td>15</td><td>30</td><td name="effect">再構成核を優先して治療する。再構成核はMon3trの治療を受けるたび、跳躍治療を追加で1回行う。第二素質の効果が2.8倍にまで上昇する</td><td></td></tr>
+<tr><td>Mon3tr</td><td>6</td><td>医療</td><td>連鎖癒師</td><td>スキル3</td><td>戦術：メルトダウン</td><td><img src="icon/技能_策略：熔毁.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>手動発動</td><td>11</td><td>15</td><td>25</td><td name="effect">攻撃範囲変化、再構成核の位置に移動し、攻撃力+330%、攻撃間隔が短縮、ブロック数+2、最大HP+5000、1秒ごとにHPを80失い、ブロック中の敵全員を同時に攻撃。通常攻撃が対象に確定ダメージを与えるようになり、攻撃時に自身のHPを攻撃力の50%治療する
+スキル終了時または致命的なダメージを受けた際、元の位置に戻る</td><td></td></tr>
+<tr><td>アランナ</td><td>5</td><td>補助</td><td>工匠</td><td>スキル1</td><td>エアブースター</td><td><img src="icon/技能_气动增压.png" width="50" height="50" loading="lazy"></td><td>パッシブ</td><td>パッシブ</td><td>-</td><td>-</td><td>-</td><td name="effect">支援装置の効果を受けているオペレーターの攻撃速度+23、支援装置の持続時間+30</td><td></td></tr>
+<tr><td>アランナ</td><td>5</td><td>補助</td><td>工匠</td><td>スキル2</td><td>ウルトラジャッキ</td><td><img src="icon/技能_“万斤顶”.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>20</td><td>15</td><td name="effect">攻撃力+50%、攻撃速度+50、素質の効果が2.7倍まで上昇、スキル終了後に支援装置を1個獲得</td><td></td></tr>
+<tr><td>ウィンドスクート</td><td>4</td><td>前衛</td><td>解放者</td><td>スキル1</td><td>攻防一如</td><td><img src="icon/技能_以攻为守.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>18</td><td>15</td><td name="effect">攻撃速度+50、防御力+55%</td><td></td></tr>
+<tr><td>ウィンドスクート</td><td>4</td><td>前衛</td><td>解放者</td><td>スキル2</td><td>快刀連斬</td><td><img src="icon/技能_招无虚发.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>40</td><td>25</td><td name="effect">攻撃範囲拡大、敵2体を同時に攻撃、攻撃が回避されなくなり、攻撃時、対象に攻撃力の200%の物理ダメージを与える</td><td></td></tr>
+<tr><td>サンクタ・ミキサー</td><td>6</td><td>重装</td><td>哨戒衛士</td><td>スキル1</td><td>銃騎士主任試験官</td><td><img src="icon/技能_铳骑主考官.png" width="50" height="50" loading="lazy"></td><td>被撃回復</td><td>自動発動</td><td>3</td><td>4</td><td>-</td><td name="effect">次の通常攻撃が攻撃力の190%の物理ダメージを与える3連撃になり、自身の周囲8マスで弾薬消費系スキルを発動している他の味方【ラテラーノ】1名に1発給弾する</td><td></td></tr>
+<tr><td>サンクタ・ミキサー</td><td>6</td><td>重装</td><td>哨戒衛士</td><td>スキル2</td><td>オクトパス・チェーンソー</td><td><img src="icon/技能_八臂电锯侠.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>35</td><td>50</td><td>-</td><td name="effect">攻撃力+150%、防御力+130%。スキル発動中致命的なダメージを受けた際、即座に20発の弾薬を消費してその被ダメージを無効化する
+合計50発の弾薬を撃ち切るとスキルが終了（手動でスキルを停止可能）</td><td>弾薬</td></tr>
+<tr><td>サンクタ・ミキサー</td><td>6</td><td>重装</td><td>哨戒衛士</td><td>スキル3</td><td>引退前の布教</td><td><img src="icon/技能_退休前布道.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>25</td><td>35</td><td>-</td><td name="effect">スキル発動時に他の味方【ラテラーノ】全員に4発給弾する。攻撃範囲拡大、最大HP+80%、攻撃力+220%、防御力+80%。攻撃を停止し、攻撃を受けると攻撃範囲内の敵最大3体に1回反撃を行う。反撃の最小間隔は通常攻撃間隔の10%
+合計30発の弾薬を撃ち切るとスキルが終了（手動でスキルを停止可能）</td><td>弾薬</td></tr>
+<tr><td>レミュアン</td><td>6</td><td>狙撃</td><td>戦術射手</td><td>スキル1</td><td>再開の挨拶</td><td><img src="icon/技能_重逢问候.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>自動発動</td><td>0</td><td>8</td><td>-</td><td name="effect">攻撃時、攻撃力が210%に上昇し、攻撃対象数+1
 合計6発の弾薬を撃ち切るとスキルが終了（手動でスキルを停止可能）</td><td>弾薬</td></tr>
-<tr unimplemented><td>レミュアン</td><td>6</td><td>狙撃</td><td>戦術射手</td><td>スキル2</td><td>帰郷の誘い</td><td><img src="icon/技能_归乡邀约.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>-</td><td name="effect">攻撃速度+80、攻撃力+70%、戦場に指名手配中の敵がいる場合、対象に最大3.5秒間照準を合わせた後、弾薬を消費して回避不可の狙撃を行う（その間攻撃力が180%から425%まで徐々に上昇し、攻撃力が敵の残りHPと防御力の合計値よりも高くなった場合、照準を停止し即座に攻撃を行う）
+<tr><td>レミュアン</td><td>6</td><td>狙撃</td><td>戦術射手</td><td>スキル2</td><td>帰郷の誘い</td><td><img src="icon/技能_归乡邀约.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>-</td><td name="effect">攻撃速度+80、攻撃力+70%、戦場に指名手配中の敵がいる場合、対象に最大3.5秒間照準を合わせた後、弾薬を消費して回避不可の狙撃を行う（その間攻撃力が180%から425%まで徐々に上昇し、攻撃力が敵の残りHPと防御力の合計値よりも高くなった場合、照準を停止し即座に攻撃を行う）
 合計7発の弾薬を撃ち切るとスキルが終了（手動でスキルを停止可能）</td><td>弾薬</td></tr>
-<tr unimplemented><td>レミュアン</td><td>6</td><td>狙撃</td><td>戦術射手</td><td>スキル3</td><td>礼砲・強制追悼</td><td><img src="icon/技能_礼炮·强制追思.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>32</td><td>38</td><td>-</td><td name="effect">攻撃を停止し、0.5秒ごとに弾薬を1発消費して範囲内にいる敵を順次ロックオンし、スキル終了時にロックオンした全ての敵の位置に攻撃力の300%の範囲物理ダメージを与える爆撃を行う（爆心地の対象へのダメージは攻撃力の450%まで上昇）
+<tr><td>レミュアン</td><td>6</td><td>狙撃</td><td>戦術射手</td><td>スキル3</td><td>礼砲・強制追悼</td><td><img src="icon/技能_礼炮·强制追思.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>32</td><td>38</td><td>-</td><td name="effect">攻撃を停止し、0.5秒ごとに弾薬を1発消費して範囲内にいる敵を順次ロックオンし、スキル終了時にロックオンした全ての敵の位置に攻撃力の300%の範囲物理ダメージを与える爆撃を行う（爆心地の対象への与ダメージは攻撃力の450%まで上昇）
 合計5発の弾薬を撃ち切るとスキルが終了（手動でスキルを停止可能）</td><td>弾薬</td></tr>
-<tr unimplemented><td>新約エクシア</td><td>6</td><td>特殊</td><td>鬼才</td><td>スキル1</td><td>スカイスイーパー</td><td><img src="icon/技能_天空大扫除.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>8</td><td>12</td><td>-</td><td name="effect">通常攻撃時、敵に攻撃力の250%の物理ダメージを与える。飛行ユニットを優先して攻撃する。手動でスキルを停止すると残りの弾薬全て攻撃範囲内の敵にランダムで発射する
+<tr><td>新約エクシア</td><td>6</td><td>特殊</td><td>鬼才</td><td>スキル1</td><td>スカイスイーパー</td><td><img src="icon/技能_天空大扫除.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>8</td><td>12</td><td>-</td><td name="effect">通常攻撃時、敵に攻撃力の250%の物理ダメージを与える。飛行ユニットを優先して攻撃する。手動でスキルを停止すると残りの弾薬全て攻撃範囲内の敵にランダムで発射する
 合計8発の弾薬を撃ち切るとスキルが終了（手動でスキルを停止可能）</td><td>弾薬</td></tr>
-<tr unimplemented><td>新約エクシア</td><td>6</td><td>特殊</td><td>鬼才</td><td>スキル2</td><td>トリガーハッピー</td><td><img src="icon/技能_开火成瘾症.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>25</td><td>30</td><td>-</td><td name="effect">攻撃範囲内の味方オペレーター1名の攻撃速度を即座に70奪取し’スキル終了、または新約エクシアが退場まで効果継続）、自身と対象に最大HPの250%のバリアを付与する（バリア値は徐々に減少する）。攻撃間隔が短縮し、通常攻撃時、敵に攻撃力の300%の物理ダメージを与える
-合計35発の弾薬を撃ち切るとスキルが終了（手動でスキルを停止可能）、攻撃速度を奪取できた場合追加で弾薬を5発獲得する</td><td>弾薬</td></tr>
-<tr unimplemented><td>新約エクシア</td><td>6</td><td>特殊</td><td>鬼才</td><td>スキル3</td><td>絶対に、確実に！</td><td><img src="icon/技能_使命必达！.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>30</td><td>35</td><td>-</td><td name="effect">攻撃力+30%、通常攻撃が攻撃力の160%での5回連続攻撃になる。「配達先座標」が配置されている場合、その場所に攻撃力の250%の物理範囲ダメージを与え、再配置時間が最も長い近距離オペレーター1名をその場所に配置し、当該オペレーターのSPを6回復する
-配置後「配達先座標」を獲得。 攻撃するたびに弾薬が5発消費され、合計50発の弾薬を撃ち切るとスキルが終了（手動でスキルを停止可能）</td><td>弾薬</td></tr>
-<tr unimplemented><td>グレースベアラー</td><td>5</td><td>前衛</td><td>本源前衛</td><td>スキル1</td><td>开颅挽歌</td><td><img src="icon/技能_开颅挽歌.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>30</td><td name="effect">通常攻撃が2回連続攻撃になり、各攻撃が攻撃力の150%の物理ダメージを与え、与えたダメージの10%分の神経損傷を追加で与える</td><td></td></tr>
-<tr unimplemented><td>グレースベアラー</td><td>5</td><td>前衛</td><td>本源前衛</td><td>スキル2</td><td>破膛弥撒</td><td><img src="icon/技能_破膛弥撒.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>0</td><td>15</td><td>-</td><td name="effect">最大6体の周囲の敵に攻撃力の250%の物理ダメージを与え、対象が神経損傷の爆発効果中の場合、代わりに元素ダメージを与える
+<tr><td>新約エクシア</td><td>6</td><td>特殊</td><td>鬼才</td><td>スキル2</td><td>トリガーハッピー</td><td><img src="icon/技能_开火成瘾症.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>25</td><td>30</td><td>-</td><td name="effect">攻撃範囲内の味方オペレーター1名の攻撃速度を即座に70奪取し’スキル終了、または新約エクシアが退場まで効果継続）、自身と対象に最大HPの250%のバリアを付与する（バリア値は徐々に減少する）。攻撃間隔が短縮し、通常攻撃時、敵に攻撃力の300%の物理ダメージを与える
+合計35発の弾薬を撃ち切るとスキルが終了（手動でスキルを停止可能）、攻撃速度を奪取できた場合追加で弾薬を5発獲得する</td><td>弾薬
+自傷</td></tr>
+<tr><td>新約エクシア</td><td>6</td><td>特殊</td><td>鬼才</td><td>スキル3</td><td>絶対に、確実に！</td><td><img src="icon/技能_使命必达！.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>30</td><td>35</td><td>-</td><td name="effect">攻撃力+30%、通常攻撃が攻撃力の160%での5回連続攻撃になる。「配達先座標」が配置されている場合、その場所に攻撃力の250%の物理範囲ダメージを与え、再配置時間が最も長い近距離オペレーター1名をその場所に配置し、当該オペレーターのSPを6回復する
+配置後「配達先座標」を獲得。
+攻撃するたびに弾薬が5発消費され、合計50発の弾薬を撃ち切るとスキルが終了（手動でスキルを停止可能）</td><td>弾薬</td></tr>
+<tr><td>グレースベアラー</td><td>5</td><td>前衛</td><td>本源前衛</td><td>スキル1</td><td>開頭の挽歌</td><td><img src="icon/技能_开颅挽歌.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>30</td><td name="effect">通常攻撃が対象に攻撃力の150%の物理ダメージを与える2連撃になり、攻撃対象に追加で与ダメージの10%の神経損傷を与える</td><td></td></tr>
+<tr><td>グレースベアラー</td><td>5</td><td>前衛</td><td>本源前衛</td><td>スキル2</td><td>開胸の弥撒</td><td><img src="icon/技能_破膛弥撒.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>0</td><td>15</td><td>-</td><td name="effect">周囲の地上にいる最大6体の敵に、攻撃力の250%の物理ダメージを3回与える。対象が神経損傷の爆発効果中の場合、代わりに元素ダメージを与える
 2回チャージ可能</td><td>チャージ</td></tr>
-<tr unimplemented><td>CONFESS-47</td><td>1</td><td>先鋒</td><td>先駆兵</td><td>-</td><td></td><td><img src="icon/技能_无.png" width="50" height="50" loading="lazy"></td><td></td><td></td><td></td><td></td><td></td><td name="effect"></td><td></td></tr>
+<tr noSkill><td>CONFESS-47</td><td>1</td><td>先鋒</td><td>先駆兵</td><td>-</td><td></td><td><img src="icon/技能_无.png" width="50" height="50" loading="lazy"></td><td></td><td></td><td></td><td></td><td></td><td name="effect"></td><td></td></tr>
 <tr unimplemented><td>トラゴディア</td><td>6</td><td>補助</td><td>祭儀師</td><td>スキル1</td><td>暗夜回声</td><td><img src="icon/技能_暗夜回声.png" width="50" height="50" loading="lazy"></td><td>攻撃回復</td><td>自動発動</td><td>2</td><td>2</td><td>-</td><td name="effect">次の攻撃時、攻撃力の150%の術ダメージを2回行い、攻撃対象を3秒間バインドする
 神経損傷爆発中でない敵を優先して攻撃し、バインド中の対象は受ける神経損傷が1.8倍に増加</td><td></td></tr>
 <tr unimplemented><td>トラゴディア</td><td>6</td><td>補助</td><td>祭儀師</td><td>スキル2</td><td>群体性谵妄</td><td><img src="icon/技能_群体性谵妄.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>0</td><td>25</td><td>-</td><td name="effect">攻撃速度+35、第一素質の拡散範囲が拡大、スキル中は「本能的召唤」を配置可能
@@ -1387,8 +1385,8 @@ HPが最大値の50%以上の場合、攻撃力+45%の勇猛状態を獲得し�
 <tr unimplemented><td>ティッピ</td><td>5</td><td>特殊</td><td>巡空者</td><td>スキル1</td><td>专业喷绘技巧</td><td><img src="icon/技能_专业喷绘技巧.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>10</td><td>20</td><td>40</td><td name="effect">即座に離陸し、攻撃範囲拡大、攻撃力+100%</td><td></td></tr>
 <tr unimplemented><td>ティッピ</td><td>5</td><td>特殊</td><td>巡空者</td><td>スキル2</td><td>紧急赶场通知</td><td><img src="icon/技能_紧急赶场通知.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>自動発動</td><td>5</td><td>10</td><td>15</td><td name="effect">即座に離陸し、攻撃範囲拡大、攻撃力+50%、通常攻撃が3連撃になる
 攻撃を受けるとスキルを発動し、その物理・術ダメージを回避する</td><td></td></tr>
-<tr unimplemented><td>Miss.Christine</td><td>5</td><td>術師</td><td>本源術師</td><td>スキル1</td><td>自由用餐礼仪</td><td><img src="icon/技能_自由用餐礼仪.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>25</td><td name="effect">攻撃力+50%、2体の敵を同時に攻撃し、追加で与えた術ダメージの15%の神経損傷を与える</td><td></td></tr>
-<tr unimplemented><td>Miss.Christine</td><td>5</td><td>術師</td><td>本源術師</td><td>スキル2</td><td>狂饮之宴</td><td><img src="icon/技能_狂饮之宴.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>35</td><td>20</td><td name="effect">攻撃を停止し、攻撃可能な対象の地点に感知灵体を放出する
+<tr unimplemented><td>ミス・クリスティーン</td><td>5</td><td>術師</td><td>本源術師</td><td>スキル1</td><td>自由用餐礼仪</td><td><img src="icon/技能_自由用餐礼仪.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>30</td><td>25</td><td name="effect">攻撃力+50%、2体の敵を同時に攻撃し、追加で与えた術ダメージの15%の神経損傷を与える</td><td></td></tr>
+<tr unimplemented><td>ミス・クリスティーン</td><td>5</td><td>術師</td><td>本源術師</td><td>スキル2</td><td>狂饮之宴</td><td><img src="icon/技能_狂饮之宴.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>15</td><td>35</td><td>20</td><td name="effect">攻撃を停止し、攻撃可能な対象の地点に感知灵体を放出する
 感知灵体は周囲の敵全員に攻撃力の115%の術ダメージを毎秒与え、神経損傷の爆発中の敵には追加で攻撃力の115%の元素ダメージを与える</td><td></td></tr>
 <tr unimplemented><td>司霆レイズ</td><td>6</td><td>前衛</td><td>解放者</td><td>スキル1</td><td>浩气长存</td><td><img src="icon/技能_浩气长存.png" width="50" height="50" loading="lazy"></td><td>自動回復</td><td>手動発動</td><td>17</td><td>11</td><td>-</td><td name="effect">攻撃範囲が正面と側面に拡大、3方向の地上敵に攻撃力の355%の物理ダメージを与える。
 3回チャージ可能、チャージを使い切るまで特性による攻撃力上昇効果がリセットされない。</td><td>チャージ</td></tr>
@@ -2430,8 +2428,7 @@ function tFilterHideInit(){
       if(elements[i].value == '★' ||
          elements[i].value == '職業' ||
          elements[i].value == '職分' ||
-         elements[i].value == '1/2/3' ||
-         elements[i].value == 'タグ'){
+         elements[i].value == '1/2/3'){
          elements[i].checked =false;
       }
     }
@@ -2596,7 +2593,3 @@ function tableReset() {
     </script>
   </body>
 </html>
-
-
-
-
