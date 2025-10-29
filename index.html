@@ -150,13 +150,24 @@ td[thFilterNone]{
 td[hiddenRow]{
   display    : none;
 }
-    </style>
+/* === 折り畳み表示用タグ ==================== */
+summary{
+  cursor: pointer;
+}
+  </style>
   </head>
   <body>
     <h3>アークナイツ　スキル一覧</h3>
-    <p>性能は最大強化時です</p>
-    <p>最終更新:2025/10/17<br>更新内容：サンクタ・ミキサー、レミュアン、新約エクシア、グレースベアラー、CONFESS-47実装。タグ列をデフォルトで表示</p>
-<!-- フィルタ対象のテーブル -->
+    <p><details>
+      <summary>このページについて</summary>
+      <p>アークナイツのスキル一覧が日本語でまとまっているページが欲しかったので作りました。<br>
+      性能は最大強化時のものです。（スキルレベル変更は力不足により未対応）<br>
+      不具合報告・要望は<a href="https://x.com/mizunekotsukai/">X(旧Twitter)</a>まで。</p>
+      <p>■最終更新:2025/10/29<br>
+      更新内容：「このページについて」を追加</p>
+      </p>
+    </details></p>
+    <!-- フィルタ対象のテーブル -->
 <!-- <th>,<td>に「cmanFilterBtn」を定義するとフィルタボタンが付きます -->
 <!--  -->
 <table id="skillTable">  <!--- テーブルのIDをJavaScriptに定義します --->
@@ -2596,5 +2607,6 @@ function tableReset() {
     </script>
   </body>
 </html>
+
 
 
